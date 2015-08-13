@@ -73,7 +73,8 @@ namespace Presentacion
 
                 teacherGradeMN = teacherGradeLN.getTeacherGradeId(Convert.ToInt32(aconpanaClaseMN.Id_Grado_seccion));
 
-                txtGradoSeccion.Text = "<b>Grado: </b>" +  teacherGradeMN.Grade.ToString() + " <b>Seccion: </b> " + teacherGradeMN.Seccion.ToString();
+                txtGradoSeccion.Text = "Grado: " +  teacherGradeMN.Grade.ToString() + " Seccion: " + teacherGradeMN.Seccion.ToString();
+                
 
 
                 temaLN = new LogicaNegocio.Tema();
@@ -93,8 +94,73 @@ namespace Presentacion
                 txtNumSesion.Text = sesionMN.NumSesion;
 
 
+                txtEstidianteAsistentes.Text = aconpanaClaseMN.Num_estudiante.ToString();
+
+                if(aconpanaClaseMN.Sesion_planificado == 0) {
+                    txtSesionPlanificado.Text = "No (" + aconpanaClaseMN.Motivo + ")";
+                } else if(aconpanaClaseMN.Sesion_planificado == 1) {
+                     txtSesionPlanificado.Text = "Si";
+                }
+
+                if (aconpanaClaseMN.Desarrollo_innovacion == 0)
+                {
+                    txtInnovacion.Text = "No";
+                }
+                else if (aconpanaClaseMN.Desarrollo_innovacion == 1)
+                {
+                    txtInnovacion.Text = "Si";
+                }
 
 
+
+                txtRecursosInformáticos.Text = aconpanaClaseMN.Recursos_informaticos;
+
+                txtRecursosAudiovisuales.Text = aconpanaClaseMN.Recursos_audiovisuales;
+
+                txtMaterialesDidactico.Text = aconpanaClaseMN.Materiales_didacticos;
+
+                txtDinamicasUsadas.Text = aconpanaClaseMN.Dinamicas_utilizadas;
+
+                TxtOtros.Text = aconpanaClaseMN.Otros;
+
+                if (aconpanaClaseMN.Asesor_intervino == 0)
+                {
+                    txtIntervino.Text = "No";
+                }
+                else if (aconpanaClaseMN.Desarrollo_innovacion == 1)
+                {
+                    txtIntervino.Text = "Si";
+                }
+
+                txtComoIntervinoSesion.Text = aconpanaClaseMN.Como_intervino;
+
+                if (aconpanaClaseMN.Intervencion_colaboradores == 0)
+                {
+                    txtOtrosColaboradores.Text = "No";
+                }
+                else if (aconpanaClaseMN.Intervencion_colaboradores == 1)
+                {
+                    txtOtrosColaboradores.Text = "Si";
+                }
+
+                txtQuien.Text = aconpanaClaseMN.Colaborador;
+
+                txtComoIntervino.Text = aconpanaClaseMN.Como_intervino;
+
+
+                if (aconpanaClaseMN.Participa_juego == 0)
+                {
+                    txtParticipaJuego.Text = "No";
+                }
+                else if (aconpanaClaseMN.Participa_juego == 1)
+                {
+                    txtParticipaJuego.Text = "Si";
+                }
+
+
+                txtEtapa.Text = aconpanaClaseMN.Etapa;
+                txtRazon.Text = aconpanaClaseMN.Razon;
+                txtIncidencia.Text = aconpanaClaseMN.Incidencia;
 
                 //txtMotivoVisita.Text = visitaMN.MotivoVisita;
 

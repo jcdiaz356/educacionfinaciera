@@ -24,14 +24,15 @@ namespace Presentacion
         public ModeloNegocio.AconpanaClase ObjAconpanaClaseMN;
         protected void Page_Load(object sender, EventArgs e)
         {
-            var dateAsString = DateTime.Now.ToString("yyyy-MM-dd");
-            var timeAsString = DateTime.Now.ToString("hh:mm:ss");
-
-
-            txtFecha.Text = dateAsString.ToString();
+            
 
             if (!IsPostBack)
             {
+
+                var dateAsString = DateTime.Now.ToString("yyyy-MM-dd");
+                var timeAsString = DateTime.Now.ToString("hh:mm:ss");
+
+                txtFecha.Text = dateAsString.ToString();
                 //Configurar Entradas
                 //txtCodigo.Attributes["placeholder"] = "Ingrese Código";
                 //txtNombreEscuela.Attributes["placeholder"] = "Ingrese Nombres y Número de la Escuela";

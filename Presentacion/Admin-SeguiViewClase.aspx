@@ -85,10 +85,11 @@
 
                                                     <div class="form-group">
                                                         <label for="Sesion">La sesión esta de acuerdo a lo planificado</label>
-                                                                <asp:RadioButtonList ID="rblPlanificado" runat="server"  >
-                                                                    <asp:ListItem CssClass="form-control" Value="1" Selected="True"> Si</asp:ListItem>
-                                                                    <asp:ListItem CssClass="form-control" Value="0"> No</asp:ListItem>   
-                                                                </asp:RadioButtonList>
+                                                                <%--<asp:RadioButtonList ID="rblPlanificado" runat="server"  >
+                                                                    <asp:ListItem CssClass="form-control" Value="1" Selected="True" Enabled="False"> Si</asp:ListItem>
+                                                                    <asp:ListItem CssClass="form-control" Value="0" Enabled="False"> No</asp:ListItem>   
+                                                                </asp:RadioButtonList>--%>
+                                                        <asp:TextBox ID="txtSesionPlanificado" CssClass="form-control" runat="server"  TextMode="Number" Enabled="False"></asp:TextBox>
                                                     </div>
 
                                                     <div class="form-group">
@@ -99,10 +100,11 @@
 
                                                     <div class="form-group">
                                                         <label for="Sesion">Desarrollo innovaciones</label>
-                                                                <asp:RadioButtonList ID="rblInnovacion" runat="server"  >
+                                                                <%--<asp:RadioButtonList ID="rblInnovacion" runat="server"  >
                                                                     <asp:ListItem CssClass="form-control" Value="1" Selected="True"> Si</asp:ListItem>
                                                                     <asp:ListItem CssClass="form-control" Value="0"> No</asp:ListItem>   
-                                                        </asp:RadioButtonList>
+                                                        </asp:RadioButtonList>--%>
+                                                        <asp:TextBox ID="txtInnovacion" CssClass="form-control" runat="server"  Enabled="False"></asp:TextBox>
                                                     </div>
 
                                                     <!-- Temas a desarrollar-->
@@ -143,26 +145,29 @@
 
                                                    <div class="form-group">
                                                         <label for="Sesion">¿El asesor intervino en la sesión?</label>
-                                                                <asp:RadioButtonList ID="rblIntervino" runat="server"  >
+                                                               <%-- <asp:RadioButtonList ID="rblIntervino" runat="server"  >
                                                                     <asp:ListItem CssClass="form-control" Value="1"> Si</asp:ListItem>
                                                                     <asp:ListItem CssClass="form-control" Value="0" Selected="True"> No</asp:ListItem>   
-                                                        </asp:RadioButtonList>
+                                                        </asp:RadioButtonList>--%>
+                                                       <asp:TextBox ID="txtIntervino" CssClass="form-control" runat="server"  Enabled="False"></asp:TextBox>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="Sesion">¿Cómo intervino?</label>
-                                                                <asp:RadioButtonList ID="rblComoIntervino" runat="server"  >
+                                                                <%--<asp:RadioButtonList ID="rblComoIntervino" runat="server"  >
                                                                     <asp:ListItem CssClass="form-control" Value="Apoyo"> Apoyo</asp:ListItem>
                                                                     <asp:ListItem CssClass="form-control" Value="Hizo la sesión"> Hizo la sesión</asp:ListItem>   
-                                                        </asp:RadioButtonList>
+                                                        </asp:RadioButtonList>--%>
+                                                        <asp:TextBox ID="txtComoIntervinoSesion" CssClass="form-control" runat="server"  Enabled="False"></asp:TextBox>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="Sesion">Intervención de otros colaboradores</label>
-                                                                <asp:RadioButtonList ID="rblOtrosColaboradores" runat="server"  >
+                                                                <%--<asp:RadioButtonList ID="rblOtrosColaboradores" runat="server"  >
                                                                     <asp:ListItem CssClass="form-control" Value="1"> Si</asp:ListItem>
                                                                     <asp:ListItem CssClass="form-control" Value="0" Selected="True"> No</asp:ListItem>   
-                                                        </asp:RadioButtonList>
+                                                        </asp:RadioButtonList>--%>
+                                                        <asp:TextBox ID="txtOtrosColaboradores" CssClass="form-control" runat="server"  Enabled="False"></asp:TextBox>
                                                     </div>
 
                                                     <div class="form-group">
@@ -183,12 +188,13 @@
                                                             </div>
                                                         <div class="panel-body">
                                                             <div class="form-group">
-                                                                 <asp:RadioButtonList ID="rblParticipaJuego" runat="server"  >
+                                                                 <%--<asp:RadioButtonList ID="rblParticipaJuego" runat="server"  >
                                                                     <asp:ListItem CssClass="form-control" Value="1" Selected="True"> Si</asp:ListItem>
                                                                      
                                                                     <asp:ListItem CssClass="form-control" Value="0"> No</asp:ListItem>  
                                                                       
-                                                                 </asp:RadioButtonList>
+                                                                 </asp:RadioButtonList>--%>
+                                                                <asp:TextBox ID="txtParticipaJuego" CssClass="form-control" runat="server" Enabled="False" ></asp:TextBox>
                                                             </div>
 
                                                             <div class="form-group">
@@ -208,7 +214,7 @@
                                                     
                                                     <div class="form-group">
                                                          <label for="Observaciones">Principal Incidencia</label>
-                                                         <asp:TextBox ID="txtInsidencia" CssClass="form-control" runat="server"  TextMode="MultiLine" Enabled="False"></asp:TextBox>
+                                                         <asp:TextBox ID="txtIncidencia" CssClass="form-control" runat="server"  TextMode="MultiLine" Enabled="False"></asp:TextBox>
                                                     </div>
 
                                                     

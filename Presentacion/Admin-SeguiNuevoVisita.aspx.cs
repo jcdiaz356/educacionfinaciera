@@ -49,13 +49,8 @@ namespace Presentacion
 
             ObjVisitaLN = new LogicaNegocio.VisitaIE();
             ObjVisitaMN = new ModeloNegocio.VisitaIE();
-
- 
-  //otaku_bcp.visitas_ie.observacion,
-  //otaku_bcp.visitas_ie.pendientes,
- 
- 
-
+              //otaku_bcp.visitas_ie.observacion,
+              //otaku_bcp.visitas_ie.pendientes,
 
             ObjVisitaMN.Fecha = Convert.ToDateTime(txtFecha.Text);
 

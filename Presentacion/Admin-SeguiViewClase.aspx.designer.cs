@@ -94,13 +94,13 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtEstidianteAsistentes;
         
         /// <summary>
-        /// rblPlanificado control.
+        /// txtSesionPlanificado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblPlanificado;
+        protected global::System.Web.UI.WebControls.TextBox txtSesionPlanificado;
         
         /// <summary>
         /// txtMotivo control.
@@ -112,13 +112,13 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtMotivo;
         
         /// <summary>
-        /// rblInnovacion control.
+        /// txtInnovacion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblInnovacion;
+        protected global::System.Web.UI.WebControls.TextBox txtInnovacion;
         
         /// <summary>
         /// txtRecursosInformáticos control.
@@ -166,31 +166,31 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.TextBox TxtOtros;
         
         /// <summary>
-        /// rblIntervino control.
+        /// txtIntervino control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblIntervino;
+        protected global::System.Web.UI.WebControls.TextBox txtIntervino;
         
         /// <summary>
-        /// rblComoIntervino control.
+        /// txtComoIntervinoSesion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblComoIntervino;
+        protected global::System.Web.UI.WebControls.TextBox txtComoIntervinoSesion;
         
         /// <summary>
-        /// rblOtrosColaboradores control.
+        /// txtOtrosColaboradores control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblOtrosColaboradores;
+        protected global::System.Web.UI.WebControls.TextBox txtOtrosColaboradores;
         
         /// <summary>
         /// txtQuien control.
@@ -211,13 +211,13 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtComoIntervino;
         
         /// <summary>
-        /// rblParticipaJuego control.
+        /// txtParticipaJuego control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblParticipaJuego;
+        protected global::System.Web.UI.WebControls.TextBox txtParticipaJuego;
         
         /// <summary>
         /// txtEtapa control.
@@ -238,13 +238,13 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtRazon;
         
         /// <summary>
-        /// txtInsidencia control.
+        /// txtIncidencia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtInsidencia;
+        protected global::System.Web.UI.WebControls.TextBox txtIncidencia;
         
         /// <summary>
         /// cmdVolver control.
