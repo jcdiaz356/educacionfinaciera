@@ -91,16 +91,16 @@
                                      
                                         <asp:Label ID="lblContent" runat="server" Text=""></asp:Label>
                                             <% if (Convert.ToInt16(Request.QueryString["id"]) == 7) {%>
-                                            <h4>Primera sesión:</h4>
+                                            <h4>Programa de Formación Docente:</h4>
                                             <ul>
                                                 <li><a href="media/archivos/Sesiones/Primera_sesion/ORIENTACIONES_METODOLOGICAS.pdf" target="_blank">Orientaciones metodológicas <span class="glyphicon glyphicon-file"></span></a> </li>
-                                                <li>Materiales Educación Financiera</li>
+                                                <li>Educación Financiera</li>
                                                 <ul>
                                                     <li><a href="media/archivos/Sesiones/Primera_sesion/Guia_Docente_2012_SBS.pdf" target="_blank">Guía Docente 2012 SBS <span class="glyphicon glyphicon-file"></span></a></li>
                                                     <li><a href="media/archivos/Sesiones/Primera_sesion/PPT_BCP.pdf" target="_blank">PPT BCP <span class="glyphicon glyphicon-file"></span></a></li>
                                                     <li><a href="media/archivos/Sesiones/Primera_sesion/SEPARATA_DEL_AHORRO_CONTROL_DE_LECTURA.pdf" target="_blank">Separata del Ahorro y control de Lectura <span class="glyphicon glyphicon-file"></span></a></li>
                                                 </ul>
-                                                <li>Materiales Habilidades Pedágogicas</li>
+                                                <li>Habilidades Pedágogicas</li>
                                                 <ul>
                                                     <li><a href="media/archivos/Sesiones/Primera_sesion/El_ser_autentico.pdf" target="_blank">El Ser Auténtico <span class="glyphicon glyphicon-file"></span></a></li>
                                                     <li><a href="media/archivos/Sesiones/Primera_sesion/EL_VINCULO_COMUNICACIONAL_Y_AFECTIVO_MAESTRO_ALUMNO.doc" target="_blank">EL VINCULO COMUNICACIONAL Y AFECTIVO MAESTRO ALUMNO <span class="glyphicon glyphicon-file"></span></a></li>
