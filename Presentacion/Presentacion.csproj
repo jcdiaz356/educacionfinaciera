@@ -691,6 +691,7 @@
     <Content Include="img\imagen3_tmp6162" />
     <Content Include="lib\mapa\burbujas.json" />
     <None Include="Properties\PublishProfiles\EducacionFinanciera.pubxml" />
+    <None Include="Properties\PublishProfiles\webBCP.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
