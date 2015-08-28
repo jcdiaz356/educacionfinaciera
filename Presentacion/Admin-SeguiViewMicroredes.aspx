@@ -23,7 +23,7 @@
                                     <div class="cuadro-content">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h3>Nueva Ficha</h3>
+                                                <h3>Ficha Acompañamiento a Microredes</h3>
 
                                                   <div class="form-group ">
                                                          
@@ -57,7 +57,7 @@
                                                         <asp:ListBox ID="ddlDocente" CssClass="form-control" runat="server" SelectionMode="Multiple"  Height="143px" Enabled="False" ></asp:ListBox>
                                                     </div>
 
-                                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                                
                                                     <div class="form-group">
                                                         <label for="Microred">Nombre de Microred</label>
                                                         

@@ -95,23 +95,70 @@
                                             <ul>
                                                 <li><a href="media/archivos/Sesiones/Primera_sesion/ORIENTACIONES_METODOLOGICAS.pdf" target="_blank">Orientaciones metodológicas <span class="glyphicon glyphicon-file"></span></a> </li>
                                                 <li>Educación Financiera</li>
+                                                
                                                 <ul>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/Guia_Docente_2012_SBS.pdf" target="_blank">Guía Docente 2012 SBS <span class="glyphicon glyphicon-file"></span></a></li>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/PPT_BCP.pdf" target="_blank">PPT BCP <span class="glyphicon glyphicon-file"></span></a></li>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/SEPARATA_DEL_AHORRO_CONTROL_DE_LECTURA.pdf" target="_blank">Separata del Ahorro y control de Lectura <span class="glyphicon glyphicon-file"></span></a></li>
+                                                    <li>1ra y 2da sesion</li>
+                                                    <ul>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/1ra_y_2da_sesion/Guia_Docente_2012_SBS.pdf" target="_blank">Guía Docente 2012 SBS <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/1ra_y_2da_sesion/PPT_BCP.pdf" target="_blank">PPT BCP <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/1ra_y_2da_sesion/SEPARATA_DEL_AHORRO_CONTROL_DE_LECTURA.pdf" target="_blank">Separata del Ahorro y control de Lectura <span class="glyphicon glyphicon-file"></span></a></li>
+                                                    </ul>
+                                                    <li>3ra y 4ta sesion</li>
+                                                    <ul>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/3ra_y_4ta_sesion/Comisiones_prohibidas_en_el_Sistema_FinancieroRES.pdf" target="_blank">Comisiones prohibidas en el Sistema FinancieroRES <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/3ra_y_4ta_sesion/Finanzas-en-el_Cole-BCP-06-07-junio.pdf" target="_blank">Finanzas en el Cole-BCP-06-07-junio <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/3ra_y_4ta_sesion/Historieta_SBS.pdf" target="_blank">Historieta SBS <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/3ra_y_4ta_sesion/Lectura-Presupuesto-Familiar.pdf" target="_blank">Lectura Presupuesto Familiar <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/3ra_y_4ta_sesion/RR_8181_2012.pdf" target="_blank">RR 8181 2012 <span class="glyphicon glyphicon-file"></span></a></li>
+                                                    </ul>
+                                                    <li>5ta y 6ta sesion</li>
+                                                    <ul>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/5ta_y_6ta_sesion/REGULACION_Y_SUPERVISION_DEL_SISTEMA_FINANCIERO.pdf" target="_blank">REGULACION Y SUPERVISION DEL SISTEMA FINANCIERO <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/1_Educacion_Financiera/5ta_y_6ta_sesion/ROL_Y_FUNCIONAMIENTO_DEL_SISTEMA_FINANCIERO.pdf" target="_blank">ROL Y FUNCIONAMIENTO DEL SISTEMA FINANCIERO <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        
+                                                    </ul>
                                                 </ul>
                                                 <li>Habilidades Pedágogicas</li>
                                                 <ul>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/El_ser_autentico.pdf" target="_blank">El Ser Auténtico <span class="glyphicon glyphicon-file"></span></a></li>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/EL_VINCULO_COMUNICACIONAL_Y_AFECTIVO_MAESTRO_ALUMNO.doc" target="_blank">EL VINCULO COMUNICACIONAL Y AFECTIVO MAESTRO ALUMNO <span class="glyphicon glyphicon-file"></span></a></li>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/INTELIGENCIA_EMOCIONAL_EN_NINOS.doc" target="_blank">INTELIGENCIA EMOCIONAL EN NIÑOS <span class="glyphicon glyphicon-file"></span></a></li>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/LA_NOCION_DEL_NINO_EN_LA_HISTORIA.doc" target="_blank">LA NOCION DEL NINO EN LA HISTORIA <span class="glyphicon glyphicon-file"></span></a></li>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/Sesion_El_Ser_Autentico.pdf" target="_blank">Sesión El Ser Auténtico <span class="glyphicon glyphicon-file"></span></a></li>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/Soportes_para_crecer.pdf" target="_blank">Soportes para crecer <span class="glyphicon glyphicon-file"></span></a></li>
-                                                    <li><a href="media/archivos/Sesiones/Primera_sesion/TEORIAS_DEL_DESARROLLO_INFANTIL.doc" target="_blank">TEORIAS DEL DESARROLLO INFANTIL <span class="glyphicon glyphicon-file"></span></a></li>
+                                                    <li>1ra y 2da sesion</li>
+                                                    <ul>
+                                                        <li><a href="media/archivos/Sesiones/2_Habilidades_Pedagogicas/1ra_y_2da_sesion/El_ser_autentico.pdf" target="_blank">El ser autentico <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/2_Habilidades_Pedagogicas/1ra_y_2da_sesion/LA_NOCION_DEL_NINO_EN_LA_HISTORIA.doc" target="_blank">LA NOCIÓN DEL NIÑO EN LA HISTORIA <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/2_Habilidades_Pedagogicas/1ra_y_2da_sesion/Soportes_para_crecer.pdf" target="_blank">Soportes para crecer <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/2_Habilidades_Pedagogicas/1ra_y_2da_sesion/TEORIAS_DEL_DESARROLLO_INFANTIL.doc" target="_blank">TEORIAS DEL DESARROLLO INFANTIL <span class="glyphicon glyphicon-file"></span></a></li>
+                                                    </ul>
+                                                    <li>3ra y 4ta sesion</li>
+                                                    <ul>
+                                                        <li><a href="media/archivos/Sesiones/2_Habilidades_Pedagogicas/3ra_y_4ta_sesion/3_historias_aula2.pdf" target="_blank">Historias aula 2 <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/2_Habilidades_Pedagogicas/3ra_y_4ta_sesion/EL_VINCULO_COMUNICACIONAL_Y_AFECTIVO_MAESTRO_ALUMNO.pdf" target="_blank">EL VINCULO COMUNICACIONAL Y AFECTIVO MAESTRO ALUMNO <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/2_Habilidades_Pedagogicas/3ra_y_4ta_sesion/FLORENTINO_SANTOS_PORRAS_01.pdf" target="_blank">FLORENTINO SANTOS PORRAS 01 <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/2_Habilidades_Pedagogicas/3ra_y_4ta_sesion/INTELIGENCIA_EMOCIONAL_EN_NINOS.pdf" target="_blank">INTELIGENCIA EMOCIONAL EN NIÑOS <span class="glyphicon glyphicon-file"></span></a></li>
+                                                    </ul>
+                                                </ul>
+                                                <li>Enfoques Educativos</li>
+                                                <ul>
+                                                    <li>1ra y 2da sesion</li>
+                                                    <ul>
+                                                        <li><a href="media/archivos/Sesiones/3_Enfoques_Educativos/1ra_y_2da_sesion/EL_ENFOQUE_DE_COMPETENCIAS.pdf" target="_blank">EL ENFOQUE DE COMPETENCIAS <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/3_Enfoques_Educativos/1ra_y_2da_sesion/ORIENTACIONES_GENERALES_PARA_LA_PLANIFICACION_CURRICULAR.pdf" target="_blank">ORIENTACIONES GENERALES PARA LA PLANIFICACION CURRICULAR <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        <li><a href="media/archivos/Sesiones/3_Enfoques_Educativos/1ra_y_2da_sesion/PPT_Enfoque_por_competencias.pdf" target="_blank">PPT Enfoque por competencias <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        
+                                                    </ul>
+                                                    <li>3ra y 4ta sesion</li>
+                                                    <ul>
+                                                        <li><a href="media/archivos/Sesiones/3_Enfoques_Educativos/3ra_y_4ta_sesion/Materiales_Enfoques_Educativos.pdf" target="_blank">Materiales Enfoques Educativos <span class="glyphicon glyphicon-file"></span></a></li>
+                                                        
+                                                    </ul>
+                                                </ul>
+                                                <li>Programacion Curricular en Educacion Financiera</li>
+                                                <ul>
+                                                    <li>1ra sesion</li>
+                                                    <ul>
+                                                        <li><a href="media/archivos/Sesiones/4_Programacion_Curricular_en_Educacion_Financiera/1ra_y_2da_sesion/ORIENTACIONES_METODOLOGICAS.pdf" target="_blank">ORIENTACIONES METODOLOGICAS <span class="glyphicon glyphicon-file"></span></a></li>
+                                                    </ul>
+                                                    
                                                 </ul>
                                             </ul>
-                                            <h4>Segunda sesión:</h4>
 
                                             <% } %>
                                         

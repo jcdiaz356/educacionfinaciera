@@ -64,8 +64,8 @@ namespace Presentacion
             ObjSchoolMN.Ugel_id = Convert.ToInt32(DdlUgel.Text);
             ObjSchoolMN.Distrito_id = Convert.ToInt32(DdlDistrito.Text);
             ObjSchoolMN.Referencia = referencia.Text;
-            ObjSchoolMN.Latitud = latitud.Text;
-            ObjSchoolMN.Longitud = longitud.Text;
+            ObjSchoolMN.Latitud = "";
+            ObjSchoolMN.Longitud = "";
             ObjSchoolMN.Director = "";
             ObjSchoolMN.Subdirector = "";
             if (NumDocHGE.Text == "")

@@ -91,7 +91,7 @@
                                                     <div class="form-group">
                                                         <label for="Observaciones">Pendientes para la próxima visita</label>
                                                       
-                                                         <asp:TextBox ID="TxtPendientes" CssClass="form-control" runat="server" placeholder="Ingrese Observaciones " TextMode="MultiLine"></asp:TextBox>
+                                                         <asp:TextBox ID="TxtPendientes" CssClass="form-control" runat="server" placeholder="Ingrese Pendientes para la próxima visita " TextMode="MultiLine"></asp:TextBox>
                                                     </div>
 
                                                     <asp:Button ID="CmdGuardar" CssClass="btn btn-default" runat="server" Text="Guardar" OnClick="CmdGuardar_Click" />

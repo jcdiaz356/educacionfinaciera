@@ -120,14 +120,14 @@
                                                         <label for="grado">Nro. Secciones Secundaria</label>
                                                         <asp:TextBox ID="NumSeccSec" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <%--<div class="form-group">
                                                         <label for="grado">Latitud</label>
                                                         <asp:TextBox ID="latitud" runat="server" CssClass="form-control"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="grado">Longitud</label>
                                                         <asp:TextBox ID="longitud" runat="server" CssClass="form-control"></asp:TextBox>
-                                                    </div>
+                                                    </div>--%>
 
                                                     <asp:Button ID="CmdGuardar" runat="server" Text="Guardar" CssClass="btn btn-default" OnClick="CmdGuardar_Click" />
                                                

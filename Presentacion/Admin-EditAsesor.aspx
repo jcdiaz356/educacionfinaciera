@@ -46,7 +46,7 @@
 
                                                     
                                                     <div class="form-group">
-                                                        <label for="Docente">Nombre del Escuela a cargo</label>
+                                                        <label for="Docente">Nombre de la(s) Escuela(s) a cargo</label>
                                                          <asp:ListBox ID="lblEscuelaACargo" runat="server" CssClass="form-control input-sm" onchange="contadorEscuela(this)" SelectionMode="Multiple"  Height="143px" >
                                                              
                                                          </asp:ListBox>
@@ -62,7 +62,7 @@
                                                     <div class="form-group">
                                                             <label for="Telefono">Nº de IEs a cargo</label>
                                                             
-                                                            <asp:TextBox ID="txtDocenteACargo" CssClass="form-control" runat="server" placeholder=" Nº de docentes a cargo"  MaxLength="3" Enabled="False"  ></asp:TextBox>
+                                                            <asp:TextBox ID="txtDocenteACargo" CssClass="form-control" runat="server" placeholder=" Nº de escuelas a cargo"  MaxLength="3" Enabled="False"  ></asp:TextBox>
                                                     </div>
 
                                                     <%--<div class="form-group">

@@ -16,14 +16,16 @@ namespace Presentacion
 
             //-------------Inicio Paginador
 
-            UscPaginador.caragaPaginador(20, Convert.ToInt32(Request.Params["pagina"]), users.countRowsDocentes());
+            UscPaginador.caragaPaginador(100, Convert.ToInt32(Request.Params["pagina"]), users.countRowsDocentes());
+            int NumRegistrosEmpezar = UscPaginador.RegistrosAEmpezar;
             //---------------Fin Paginador
 
-            listUsuario = users.getAllDocente(20, UscPaginador.RegistrosAEmpezar);
+            listUsuario = users.getAllDocente(100, UscPaginador.RegistrosAEmpezar);
             foreach (ModeloNegocio.Docente Docentes in listUsuario)
             {
+                NumRegistrosEmpezar++;
                 FilasListaDocente.Text += "<tr id='" + Docentes.School_id + "'>";
-                FilasListaDocente.Text += "<th scope=row>" + Docentes.School_id + "</th>";
+                FilasListaDocente.Text += "<th scope=row>" + NumRegistrosEmpezar + "</th>";
                 FilasListaDocente.Text += "<td>" + Docentes.Codigo + "</td>";
                 FilasListaDocente.Text += "<td>" + Docentes.FullName + "</td>";
                 FilasListaDocente.Text += "<td>" + Docentes.FechaCreado + "</td>";

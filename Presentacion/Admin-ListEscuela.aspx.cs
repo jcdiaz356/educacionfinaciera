@@ -17,13 +17,15 @@ namespace Presentacion
             //-------------Inicio Paginador
 
             UscPaginador.caragaPaginador(20, Convert.ToInt32(Request.Params["pagina"]), school.countRowsSchool());
+            int NumRegistrosEmpezar = UscPaginador.RegistrosAEmpezar;
             //---------------Fin Paginador
 
             listSchool = school.getAllSchool(20, UscPaginador.RegistrosAEmpezar);
             foreach (ModeloNegocio.School School in listSchool)
             {
+                NumRegistrosEmpezar++;
                 FilasListaSchool.Text += "<tr id='" + School.id + "'>";
-                FilasListaSchool.Text += "<th scope=row>" + School.id + "</th>";
+                FilasListaSchool.Text += "<th scope=row>" + NumRegistrosEmpezar + "</th>";
                 FilasListaSchool.Text += "<td>" + School.Codigo + "</td>";
                 FilasListaSchool.Text += "<td>" + School.Nombre + "</td>";
                 FilasListaSchool.Text += "<td>" + School.FechaCreado + "</td>";

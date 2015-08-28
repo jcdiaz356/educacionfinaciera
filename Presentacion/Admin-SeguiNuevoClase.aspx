@@ -66,14 +66,14 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="Sesion">Nombre de sesión por Grado</label>
+                                                        <label for="Sesion">Bloques Tematicos según Grado</label>
                                                         <asp:DropDownList ID="ddlNombSesion" CssClass="form-control" runat="server" onchange="poblandoNumSesion(this)">
                                                         </asp:DropDownList>
                                                         
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="Participantes">N° de sesión</label>
+                                                        <label for="Participantes">N° de sesión aplicada por grado</label>
                                                         <asp:DropDownList ID="ddlSesion" CssClass="form-control" runat="server">
                                                             
                                                         </asp:DropDownList>
@@ -137,7 +137,7 @@
                                                             </div>
 
                                                             <div class="form-group">
-                                                                <label for="Financiera">Otros (celulares, vistas, etc.)</label>
+                                                                <label for="Financiera">Otros (celulares, visitas guiadas, etc.)</label>
                                                                 <asp:TextBox ID="TxtOtros" CssClass="form-control" runat="server" placeholder="Detalle brevemente"></asp:TextBox>
                                                             </div>
                                                         </div>
@@ -156,7 +156,8 @@
                                                         <label for="Sesion">¿Cómo intervino?</label>
                                                                 <asp:RadioButtonList ID="rblComoIntervino" runat="server"  >
                                                                     <asp:ListItem CssClass="form-control" Value="Apoyo"> Apoyo</asp:ListItem>
-                                                                    <asp:ListItem CssClass="form-control" Value="Hizo la sesión"> Hizo la sesión</asp:ListItem>   
+                                                                    <asp:ListItem CssClass="form-control" Value="Hizo la sesión"> Hizo la sesión</asp:ListItem>
+                                                                    <asp:ListItem CssClass="form-control" Value="Solo Observo la clase"> Solo Observo la clase</asp:ListItem>   
                                                         </asp:RadioButtonList>
                                                     </div>
 
@@ -412,7 +413,7 @@
                     console.log(item);
 
 
-                    $("#<%= lblGradoSeccion.ClientID %>").append("<option value=\"" + item.Id + "\">" + item.Grade + "|" + item.Seccion  + "</option>");
+                    $("#<%= lblGradoSeccion.ClientID %>").append("<option value=\"" + item.Id + "\">" + item.Grade + "|" + item.Seccion + " (" + item.Num_alumnos + " alumnos)" + "</option>");
                 });
             }
         }

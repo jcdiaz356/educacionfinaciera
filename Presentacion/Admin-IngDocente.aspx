@@ -636,14 +636,14 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="Docente">Cursos que enseña</label>
+                                                        <label for="Docente">Areas Curriculares que enseña</label>
                                                          <asp:ListBox ID="lblCursos" runat="server" CssClass="form-control input-sm" SelectionMode="Multiple"  Height="143px">
                                                              
                                                          </asp:ListBox>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="Docente">Turnos que enseña</label>
+                                                        <label for="Docente">Turnos en que enseña</label>
                                                          <asp:ListBox ID="lblTurnos" runat="server" CssClass="form-control input-sm" SelectionMode="Multiple"  Height="143px">
                                                              
                                                          </asp:ListBox>

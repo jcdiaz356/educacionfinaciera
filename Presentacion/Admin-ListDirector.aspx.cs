@@ -17,11 +17,13 @@ namespace Presentacion
             //-------------Inicio Paginador
 
             UscPaginador.caragaPaginador(20, Convert.ToInt32(Request.Params["pagina"]), users.countRows(8));
+            int NumRegistrosEmpezar = UscPaginador.RegistrosAEmpezar;
             //---------------Fin Paginador
 
             listUsuario = users.getAllDirector(20, UscPaginador.RegistrosAEmpezar,8);
             foreach (ModeloNegocio.Director director in listUsuario)
             {
+                NumRegistrosEmpezar++;
                 FilasListaDocente.Text += "<tr id='" + director.School_id + "'>";
                 FilasListaDocente.Text += "<th scope=row>" + director.School_id + "</th>";
                 FilasListaDocente.Text += "<td>" + director.Codigo + "</td>";

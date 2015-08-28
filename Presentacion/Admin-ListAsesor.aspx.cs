@@ -18,12 +18,14 @@ namespace Presentacion
             //-------------Inicio Paginador
 
             UscPaginador.caragaPaginador(20, Convert.ToInt32(Request.Params["pagina"]), users.countRowsAsesores());
+            int NumRegistrosEmpezar = UscPaginador.RegistrosAEmpezar;
             //---------------Fin Paginador
             listUsuario = users.getAllAsesors(20, UscPaginador.RegistrosAEmpezar);
             foreach(ModeloNegocio.Asesor Asesores in listUsuario)
             {
+                NumRegistrosEmpezar++;
                 FilasListaAsesores.Text += "<tr id='" + Asesores.id + "'>";
-                FilasListaAsesores.Text += "<th scope=row>" + Asesores.id + "</th>";
+                FilasListaAsesores.Text += "<th scope=row>" + NumRegistrosEmpezar + "</th>";
                 FilasListaAsesores.Text += "<td>" + Asesores.Codigo + "</td>";
                 FilasListaAsesores.Text += "<td>" + Asesores.FullName + "</td>";
                 FilasListaAsesores.Text += "<td>" + Asesores.FechaCreado + "</td>";

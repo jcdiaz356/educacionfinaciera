@@ -36,6 +36,7 @@ namespace Presentacion
                 lblEscuelaACargo.DataValueField = "id";
                 lblEscuelaACargo.DataTextField = "Nombre";
                 lblEscuelaACargo.DataBind();
+                
                 int c=0;
                 foreach(ModeloNegocio.School listSchool in AsesorMN.Schools)
                 {
@@ -43,7 +44,7 @@ namespace Presentacion
                     lblEscuelaACargo.Items[c].Selected = true;
                     c = c + 1;
                 }
-                //txtISACargo.Text = Convert.ToString(c);
+                txtDocenteACargo.Text = Convert.ToString(c);
 
                 LogicaNegocio.Docente ObjDocenteLN = new LogicaNegocio.Docente();
                 //lblDocenteCaCargo.DataSource = ObjDocenteLN.getAllDocente();

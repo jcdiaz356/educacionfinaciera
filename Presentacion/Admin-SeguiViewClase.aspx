@@ -136,7 +136,7 @@
                                                             </div>
 
                                                             <div class="form-group">
-                                                                <label for="Financiera">Otros (celulares, vistas, etc.)</label>
+                                                                <label for="Financiera">Otros (celulares, visitas guiadas, etc.)</label>
                                                                 <asp:TextBox ID="TxtOtros" CssClass="form-control" runat="server"  Enabled="False"></asp:TextBox>
                                                             </div>
                                                         </div>
