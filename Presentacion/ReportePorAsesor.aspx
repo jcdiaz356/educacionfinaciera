@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Admin-RepoInstAsistidas.aspx.cs" Inherits="Presentacion.Admin_RepoInstAsistidas" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ReportePorAsesor.aspx.cs" Inherits="Presentacion.ReportePorAsesor" %>
 <%@ Register TagPrefix="AdminMenuLeftRepo" tagname="AdminMenuLeftRepo" src="UscControl/AdminMenuLeftRepo.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
@@ -19,7 +19,7 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="title">
-                                        TOTAL INSTITUCIONES ASISTIDAS
+                                        TOTAL REPORTES POR ASESOR
                                         <div class="triangulo_top_right" ></div>
                                     </div>
                                 </div>
@@ -33,20 +33,22 @@
                                                 Cantidad de Colegios: <asp:Label ID="lblNumColegios" runat="server" Text="Num"></asp:Label></h3>
                                             </div>
                                         </div>
+                                        
+
                                         <div class="row">
                                             <div class="col-md-8">
-                                                <div class="text-center"><h4>Numero de Colegios por UGEL</h4></div>
+                                                <div class="text-center"><h4>Numero de Colegios por ASESOR</h4></div>
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                                <th>UGEL</th>
+                                                                <th>ASESOR</th>
                                                                 <th>Num. Colegios</th>
                                                                 <th>%</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <asp:Label ID="lblNumSchoolForUgel" runat="server" Text=""></asp:Label>
+                                                            <asp:Label ID="lblNumSchoolForAsesor" runat="server" Text=""></asp:Label>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -57,20 +59,18 @@
 
                                         <div class="row">
                                             <div class="col-md-8">
-                                                <div class="text-center"><h4>Numero de Profesores por Colegio</h4></div>
-                                                <div class="text-center"><h5>Total profesores: <asp:Label ID="lblCountTeachers" runat="server" Text=""></asp:Label></h5></div>
+                                                <div class="text-center"><h4>Numero de Profesores por ASESOR</h4></div>
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                                <th>Cod. Colegio</th>
-                                                                <th>Nomb. Colegio</th>
+                                                                <th>ASESOR</th>
                                                                 <th>Num. Profesores</th>
                                                                 <th>%</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <asp:Label ID="lblNumTeacherForSchool" runat="server" Text=""></asp:Label>
+                                                            <asp:Label ID="lblNumTeacherForAsesor" runat="server" Text=""></asp:Label>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -79,31 +79,6 @@
                                             </div>
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <div class="text-center"><h4>Numero de Alumnos por Colegio</h4></div>
-                                                <div class="text-center"><h5>Total alumnos: <asp:Label ID="lblCountStudents" runat="server" Text=""></asp:Label></h5></div>
-                                                <div class="table-responsive">
-                                                    <table class="table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Cod. Colegio</th>
-                                                                <th>Nomb. Colegio</th>
-                                                                <th>Num. Alumnos</th>
-                                                                <th>%</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <asp:Label ID="lblNumStudentsForSchool" runat="server" Text=""></asp:Label>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                            </div>
-                                        </div>
-
-                                        
                                     </div>
                                 </div>
                             </div>

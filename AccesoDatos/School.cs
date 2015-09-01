@@ -836,6 +836,30 @@ namespace AccesoDatos
 
         }
 
+        public DataTable getCountStudentsForSchool()
+        {
+            Dt = new DataTable();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "PA_COUNT_STUDENTS_FOR_SCHOOL";
+                Dtr = Cmd.ExecuteReader();
+                Dt.Constraints.Clear();
+                Dt.BeginLoadData();
+                Dt.Load(Dtr);
+                Dtr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return Dt;
+
+        }
+
         public DataTable getCountSchoolForAsesor()
         {
             Dt = new DataTable();

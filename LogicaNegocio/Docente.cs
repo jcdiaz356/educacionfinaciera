@@ -109,5 +109,12 @@ namespace LogicaNegocio
             return docente.countRowsDocentes();
 
         }
+
+        public int countRowsStudents()
+        {
+            AccesoDatos.Docente docente = new AccesoDatos.Docente();
+            return docente.countRowsStudents();
+
+        }
     }
 }

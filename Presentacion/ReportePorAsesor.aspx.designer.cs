@@ -10,7 +10,7 @@
 namespace Presentacion {
     
     
-    public partial class Admin_RepoInstAsistidas {
+    public partial class ReportePorAsesor {
         
         /// <summary>
         /// Control AdminMenuLeftRepo1.
@@ -31,48 +31,21 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.Label lblNumColegios;
         
         /// <summary>
-        /// Control lblNumSchoolForUgel.
+        /// Control lblNumSchoolForAsesor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNumSchoolForUgel;
+        protected global::System.Web.UI.WebControls.Label lblNumSchoolForAsesor;
         
         /// <summary>
-        /// Control lblCountTeachers.
+        /// Control lblNumTeacherForAsesor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCountTeachers;
-        
-        /// <summary>
-        /// Control lblNumTeacherForSchool.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNumTeacherForSchool;
-        
-        /// <summary>
-        /// Control lblCountStudents.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCountStudents;
-        
-        /// <summary>
-        /// Control lblNumStudentsForSchool.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNumStudentsForSchool;
+        protected global::System.Web.UI.WebControls.Label lblNumTeacherForAsesor;
     }
 }

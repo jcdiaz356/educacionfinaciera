@@ -45,5 +45,12 @@ namespace LogicaNegocio
             return lista;
 
         }
+
+        public DataTable countTeacherForSchool()
+        {
+
+            AccesoDatos.UserSchool userSchoolAD = new AccesoDatos.UserSchool();
+            return userSchoolAD.getCountTeacherForSchool();
+        }
     }
 }

@@ -239,6 +239,7 @@
     <Content Include="Default.aspx" />
     <Content Include="PasswordUser.aspx" />
     <Content Include="ReporteConsolidado.aspx" />
+    <Content Include="ReportePorAsesor.aspx" />
     <Content Include="ReporteVisitasIE.aspx" />
     <Content Include="SocialFacebook.ascx" />
     <Content Include="testimonio.aspx" />
@@ -507,6 +508,13 @@
     </Compile>
     <Compile Include="ReporteConsolidado.aspx.designer.cs">
       <DependentUpon>ReporteConsolidado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePorAsesor.aspx.cs">
+      <DependentUpon>ReportePorAsesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportePorAsesor.aspx.designer.cs">
+      <DependentUpon>ReportePorAsesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReporteVisitasIE.aspx.cs">
       <DependentUpon>ReporteVisitasIE.aspx</DependentUpon>

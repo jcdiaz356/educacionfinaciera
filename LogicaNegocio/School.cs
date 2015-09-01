@@ -110,6 +110,13 @@ namespace LogicaNegocio
             return schoolAD.getCountSchoolForUgel();
         }
 
+        public DataTable countStudentsForSchool()
+        {
+
+            AccesoDatos.School schoolAD = new AccesoDatos.School();
+            return schoolAD.getCountStudentsForSchool();
+        }
+
         public DataTable countSchoolForAsesor()
         {
 

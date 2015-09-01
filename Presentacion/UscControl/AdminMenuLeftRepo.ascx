@@ -14,7 +14,7 @@
             </div>
             <% 
                 int idContent = Convert.ToInt16(Request.QueryString["id"]);
-                String Active1 = "", Active2 = "", Active3 = "";
+                String Active1 = "", Active2 = "", Active3 = "", Active4 = "";
                 switch (idContent)
                 {
                     case 1:
@@ -26,6 +26,9 @@
                     case 3:
                         Active3 = "active";
                         break;
+                    case 4:
+                        Active4 = "active";
+                        break;
 
                 }
             %>
@@ -34,7 +37,8 @@
                 <ul class="nav navbar-nav">
                     <li class="<% Response.Write(Active1); %>"><a href="ReporteConsolidado.aspx?id=1">Reporte Consolidado <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
                     <li class="<% Response.Write(Active2); %>"><a href="Admin-RepoInstAsistidas.aspx?id=2">Instituciones Educativas <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
-                    <li class="<% Response.Write(Active3); %>"><a href="ReporteVisitasIE.aspx?id=3">VISITAS IE <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
+                    <li class="<% Response.Write(Active3); %>"><a href="ReportePorAsesor.aspx?id=3">Por Asesor <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
+                    <li class="<% Response.Write(Active4); %>"><a href="ReporteVisitasIE.aspx?id=4">VISITAS IE <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
                     <%--<li class="<% Response.Write(Active2); %>"><a href="Admin-RepoDocAsesorados.aspx?id=2">Total Docentes Asesorados<div class="triangulo_top_right" ></div></a></li>
                     <li class="<% Response.Write(Active2); %>"><a href="Admin-RepoSesRealizadas.aspx?id=3">Total Sesiones Realizadas<div class="triangulo_top_right" ></div></a></li>--%>
                     
