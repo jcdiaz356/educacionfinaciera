@@ -75,8 +75,8 @@ namespace Presentacion
 
             //Request.Form[txtParticipante.UniqueID]
 
-            ObjAconpanaClaseMN.Id_Grado_seccion = Convert.ToString(Request.Form[lblGradoSeccion.UniqueID]);
-            ObjAconpanaClaseMN.Id_Tema_Nombre_sesion = Convert.ToString(Request.Form[ddlNombSesion.UniqueID]);
+            ObjAconpanaClaseMN.Id_Grado_seccion = Convert.ToInt32(Request.Form[lblGradoSeccion.UniqueID]);
+            ObjAconpanaClaseMN.Id_Tema_Nombre_sesion = Convert.ToInt32(Request.Form[ddlNombSesion.UniqueID]);
             ObjAconpanaClaseMN.Id_sesion = Convert.ToInt32(Request.Form[ddlSesion.UniqueID]);
 
 

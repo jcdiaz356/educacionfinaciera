@@ -46,9 +46,9 @@ namespace AccesoDatos
                     aconpanaClase.Asesor_id = Convert.ToInt32(Dtr["asesor_id"]);
                     aconpanaClase.School_id = Convert.ToInt32(Dtr["school_id"] );
                     aconpanaClase.Docente_id = Convert.ToInt32(Dtr["docente_id"]);
-                    aconpanaClase.Id_Grado_seccion = Dtr["id_grado_seccion"].ToString();
+                    aconpanaClase.Id_Grado_seccion = Convert.ToInt32(Dtr["id_grado_seccion"]);
                     aconpanaClase.Id_sesion = Convert.ToInt32(Dtr["id_sesion"]);
-                    aconpanaClase.Id_Tema_Nombre_sesion = Dtr["id_tema_nombre_sesion"].ToString();
+                    aconpanaClase.Id_Tema_Nombre_sesion = Convert.ToInt32(Dtr["id_tema_nombre_sesion"]);
                     aconpanaClase.Num_estudiante =Convert.ToInt32(Dtr["num_estudiante"]);
 
                     aconpanaClase.Sesion_planificado = Convert.ToInt32(Dtr["sesion_planificado"]);
@@ -131,9 +131,9 @@ namespace AccesoDatos
                     aconpanaClase.Asesor_id = Convert.ToInt32(Dtr["asesor_id"]);
                     aconpanaClase.School_id = Convert.ToInt32(Dtr["school_id"]);
                     aconpanaClase.Docente_id = Convert.ToInt32(Dtr["docente_id"]);
-                    aconpanaClase.Id_Grado_seccion = Dtr["id_grado_seccion"].ToString();
+                    aconpanaClase.Id_Grado_seccion = Convert.ToInt32(Dtr["id_grado_seccion"]);
                     aconpanaClase.Id_sesion = Convert.ToInt32(Dtr["id_sesion"]);
-                    aconpanaClase.Id_Tema_Nombre_sesion = Dtr["id_tema_nombre_sesion"].ToString();
+                    aconpanaClase.Id_Tema_Nombre_sesion = Convert.ToInt32(Dtr["id_tema_nombre_sesion"]);
                     aconpanaClase.Num_estudiante = Convert.ToInt32(Dtr["num_estudiante"]);
 
                     aconpanaClase.Sesion_planificado = Convert.ToInt32(Dtr["sesion_planificado"]);
@@ -197,9 +197,9 @@ namespace AccesoDatos
                 Cmd.Parameters.Add("@asesor_id", SqlDbType.Int).Value = ObjAconpanaClase.Asesor_id;
                 Cmd.Parameters.Add("@docente_id", SqlDbType.Int).Value = ObjAconpanaClase.Docente_id;
                 Cmd.Parameters.Add("@school_id", SqlDbType.Int).Value = ObjAconpanaClase.School_id;
-                Cmd.Parameters.Add("@id_grado_seccion", SqlDbType.VarChar).Value = ObjAconpanaClase.Id_Grado_seccion;
+                Cmd.Parameters.Add("@id_grado_seccion", SqlDbType.Int).Value = ObjAconpanaClase.Id_Grado_seccion;
                 Cmd.Parameters.Add("@id_sesion", SqlDbType.Int).Value = ObjAconpanaClase.Id_sesion;
-                Cmd.Parameters.Add("@id_tema_nombre_sesion", SqlDbType.Text).Value = ObjAconpanaClase.Id_Tema_Nombre_sesion;
+                Cmd.Parameters.Add("@id_tema_nombre_sesion", SqlDbType.Int).Value = ObjAconpanaClase.Id_Tema_Nombre_sesion;
                 Cmd.Parameters.Add("@num_estudiante", SqlDbType.Int).Value = ObjAconpanaClase.Num_estudiante;
                 Cmd.Parameters.Add("@sesion_planificado", SqlDbType.Int).Value = ObjAconpanaClase.Sesion_planificado;
                 Cmd.Parameters.Add("@motivo", SqlDbType.Text).Value = ObjAconpanaClase.Motivo;

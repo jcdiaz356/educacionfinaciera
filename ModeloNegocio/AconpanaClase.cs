@@ -46,8 +46,8 @@ namespace ModeloNegocio
           
         
         
-        private string _id_grado_seccion;
-        public string Id_Grado_seccion
+        private int _id_grado_seccion;
+        public int Id_Grado_seccion
         {
             get { return _id_grado_seccion; }
             set { _id_grado_seccion = value; }
@@ -59,9 +59,9 @@ namespace ModeloNegocio
             get { return _id_sesion; }
             set { _id_sesion = value; }
         }
-        private string _id_tema_nombre_sesion;
+        private int _id_tema_nombre_sesion;
 
-        public string Id_Tema_Nombre_sesion
+        public int Id_Tema_Nombre_sesion
         {
             get { return _id_tema_nombre_sesion; }
             set { _id_tema_nombre_sesion = value; }
