@@ -52,5 +52,23 @@ namespace LogicaNegocio
             AccesoDatos.UserSchool userSchoolAD = new AccesoDatos.UserSchool();
             return userSchoolAD.getCountTeacherForSchool();
         }
+
+        public int getCountTeacherForIdSchool(int school_id)
+        {
+            AccesoDatos.UserSchool userSchoolAD = new AccesoDatos.UserSchool();
+            return userSchoolAD.getCountTeacherForIdSchool(school_id);
+        }
+
+        public int getCountTeachersForIdAsesor(int asesor_id)
+        {
+            List<ModeloNegocio.School> listSchoolsForAsesor = new List<ModeloNegocio.School>();
+            int Qteachears = 0;
+            listSchoolsForAsesor = this.getAllSchoolForUser(asesor_id);
+            foreach (ModeloNegocio.School SchoolForAsesor in listSchoolsForAsesor)
+            {
+                Qteachears = Qteachears + this.getCountTeacherForIdSchool(SchoolForAsesor.id);
+            }
+            return Qteachears;
+        }
     }
 }

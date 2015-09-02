@@ -60,6 +60,7 @@
                                         <div class="row">
                                             <div class="col-md-8">
                                                 <div class="text-center"><h4>Numero de Profesores por ASESOR</h4></div>
+                                                <div class="text-center"><h5>Total profesores: <asp:Label ID="lblCountTeachers" runat="server" Text=""></asp:Label></h5></div>
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <thead>

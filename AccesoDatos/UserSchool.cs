@@ -151,5 +151,32 @@ namespace AccesoDatos
 
         }
 
+        public int getCountTeacherForIdSchool(int school_id)
+        {
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            int total_rows = 0;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "PA_COUNT_TEACHER_FOR_IDSCHOOL";
+                Cmd.Parameters.Add("@school_id", SqlDbType.Int).Value = school_id;
+                Dtr = Cmd.ExecuteReader();
+
+                while (Dtr.Read())
+                {
+
+                    total_rows = Convert.ToInt32(Dtr["total_rows"]);
+
+                }
+                Conn.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return total_rows;
+        }
+
     }
 }

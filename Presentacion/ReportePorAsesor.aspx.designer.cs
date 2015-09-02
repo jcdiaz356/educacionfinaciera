@@ -40,6 +40,15 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.Label lblNumSchoolForAsesor;
         
         /// <summary>
+        /// Control lblCountTeachers.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCountTeachers;
+        
+        /// <summary>
         /// Control lblNumTeacherForAsesor.
         /// </summary>
         /// <remarks>
