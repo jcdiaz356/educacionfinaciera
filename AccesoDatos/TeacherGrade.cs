@@ -134,10 +134,14 @@ namespace AccesoDatos
                 {
 
                     teacherGrade.Id = Convert.ToInt32(Dtr["id"]);
-                    teacherGrade.Grade =  Dtr["grade"].ToString();
+                    if (DBNull.Value.Equals(Dtr["grade"]))
+                        teacherGrade.Grade = "";
+                    else
+                        teacherGrade.Grade =  Dtr["grade"].ToString();
 
                     if (DBNull.Value.Equals(Dtr["num_alumnos"])) teacherGrade.Num_alumnos = 0 ; else teacherGrade.Num_alumnos = Convert.ToInt32(Dtr["num_alumnos"]);
-                    if (DBNull.Value.Equals(Dtr["seccion"])) teacherGrade.Seccion = ""; else teacherGrade.Seccion = Dtr["seccion"].ToString(); 
+                    if (DBNull.Value.Equals(Dtr["seccion"])) teacherGrade.Seccion = ""; 
+                    else teacherGrade.Seccion = Dtr["seccion"].ToString(); 
                     teacherGrade.UserTeacheId =Convert.ToInt32(Dtr["user_teacher_id"].ToString());
                     if (DBNull.Value.Equals(Dtr["created_at"])) teacherGrade.Created_at = DateTime.Now; else teacherGrade.Created_at = DateTime.Parse(Dtr["created_at"].ToString());
                     if (DBNull.Value.Equals(Dtr["updated_at"])) teacherGrade.Updated_at = DateTime.Now; else teacherGrade.Updated_at = DateTime.Parse(Dtr["updated_at"].ToString());

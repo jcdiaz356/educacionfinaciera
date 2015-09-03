@@ -72,6 +72,11 @@ namespace Presentacion
                 teacherGradeMN = new ModeloNegocio.TeacherGrade();
 
                 teacherGradeMN = teacherGradeLN.getTeacherGradeId(Convert.ToInt32(aconpanaClaseMN.Id_Grado_seccion));
+                if (teacherGradeMN.Grade == null)
+                    teacherGradeMN.Grade = "";
+                if (teacherGradeMN.Seccion == null)
+                    teacherGradeMN.Seccion = "";
+
 
                 txtGradoSeccion.Text = "Grado: " +  teacherGradeMN.Grade.ToString() + " Seccion: " + teacherGradeMN.Seccion.ToString();
                 
