@@ -102,7 +102,8 @@ namespace Presentacion
                 txtEstidianteAsistentes.Text = aconpanaClaseMN.Num_estudiante.ToString();
 
                 if(aconpanaClaseMN.Sesion_planificado == 0) {
-                    txtSesionPlanificado.Text = "No (" + aconpanaClaseMN.Motivo + ")";
+                    txtSesionPlanificado.Text = "No";
+                    txtMotivo.Text = aconpanaClaseMN.Motivo;
                 } else if(aconpanaClaseMN.Sesion_planificado == 1) {
                      txtSesionPlanificado.Text = "Si";
                 }
