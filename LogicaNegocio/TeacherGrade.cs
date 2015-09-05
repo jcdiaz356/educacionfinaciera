@@ -69,5 +69,12 @@ namespace LogicaNegocio
             AccesoDatos.TeacherGrade teacherGradeAD = new AccesoDatos.TeacherGrade();
             return teacherGradeAD.deleteTeacherGrade(idTeacher);
         }
+
+        public DataTable getCountGradesForTeachers()
+        {
+
+            AccesoDatos.TeacherGrade teacherGradeAD = new AccesoDatos.TeacherGrade();
+            return teacherGradeAD.getCountGradesForTeachers();
+        }
     }
 }

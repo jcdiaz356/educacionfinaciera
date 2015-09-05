@@ -80,7 +80,7 @@
                                                     <div class="form-group">
                                                         <label for="Sesion">Nro. de Estudiantes Asistentes a la clase</label>
                                                    
-                                                        <asp:TextBox ID="txtEstidianteAsistentes" CssClass="form-control" runat="server"  TextMode="Number" Enabled="False"></asp:TextBox>
+                                                        <asp:TextBox ID="txtEstidianteAsistentes" CssClass="form-control" runat="server"   Enabled="False"></asp:TextBox>
                                                     </div>
 
                                                     <div class="form-group">
@@ -89,7 +89,7 @@
                                                                     <asp:ListItem CssClass="form-control" Value="1" Selected="True" Enabled="False"> Si</asp:ListItem>
                                                                     <asp:ListItem CssClass="form-control" Value="0" Enabled="False"> No</asp:ListItem>   
                                                                 </asp:RadioButtonList>--%>
-                                                        <asp:TextBox ID="txtSesionPlanificado" CssClass="form-control" runat="server"  TextMode="Number" Enabled="False"></asp:TextBox>
+                                                        <asp:TextBox ID="txtSesionPlanificado" CssClass="form-control" runat="server"   Enabled="False"></asp:TextBox>
                                                     </div>
 
                                                     <div class="form-group">
