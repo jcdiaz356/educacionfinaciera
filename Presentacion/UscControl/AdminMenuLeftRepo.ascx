@@ -14,7 +14,7 @@
             </div>
             <% 
                 int idContent = Convert.ToInt16(Request.QueryString["id"]);
-                String Active1 = "", Active2 = "", Active3 = "", Active4 = "", Active5 = "";
+                String Active1 = "", Active2 = "", Active3 = "", Active4 = "", Active5 = "", Active6 = "";
                 switch (idContent)
                 {
                     case 1:
@@ -32,7 +32,9 @@
                     case 5:
                         Active5 = "active";
                         break;
-
+                    case 6:
+                        Active6 = "active";
+                        break;
                 }
             %>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,8 +45,7 @@
                     <li class="<% Response.Write(Active3); %>"><a href="ReportePorAsesor.aspx?id=3">Asesores <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
                     <li class="<% Response.Write(Active4); %>"><a href="ReportesPorProfesor.aspx?id=4">Profesores <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
                     <li class="<% Response.Write(Active5); %>"><a href="ReporteVisitasIE.aspx?id=5">VISITAS IE <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
-                    <%--<li class="<% Response.Write(Active2); %>"><a href="Admin-RepoDocAsesorados.aspx?id=2">Total Docentes Asesorados<div class="triangulo_top_right" ></div></a></li>
-                    <li class="<% Response.Write(Active2); %>"><a href="Admin-RepoSesRealizadas.aspx?id=3">Total Sesiones Realizadas<div class="triangulo_top_right" ></div></a></li>--%>
+                    <li class="<% Response.Write(Active6); %>"><a href="ReporteAcomClases.aspx?id=6">ACOMPAÑA A CLASES <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
                     
                     
                 </ul>

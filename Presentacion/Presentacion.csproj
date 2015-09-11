@@ -238,6 +238,7 @@
     <Content Include="packages.config" />
     <Content Include="Default.aspx" />
     <Content Include="PasswordUser.aspx" />
+    <Content Include="ReporteAcomClases.aspx" />
     <Content Include="ReporteConsolidado.aspx" />
     <Content Include="ReportePorAsesor.aspx" />
     <Content Include="ReportesPorProfesor.aspx" />
@@ -502,6 +503,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteAcomClases.aspx.cs">
+      <DependentUpon>ReporteAcomClases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteAcomClases.aspx.designer.cs">
+      <DependentUpon>ReporteAcomClases.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReporteConsolidado.aspx.cs">
       <DependentUpon>ReporteConsolidado.aspx</DependentUpon>
