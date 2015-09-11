@@ -76,5 +76,28 @@ namespace LogicaNegocio
             AccesoDatos.TeacherGrade teacherGradeAD = new AccesoDatos.TeacherGrade();
             return teacherGradeAD.getCountGradesForTeachers();
         }
+
+        public int getCountSeccForIdTeachers(int teacher_id)
+        {
+            AccesoDatos.TeacherGrade teacherGrade = new AccesoDatos.TeacherGrade();
+            return teacherGrade.getCountSeccForIdTeachers(teacher_id);
+
+        }
+
+        public DataTable getGradesForIdTeacher(int teacher_id)
+        {
+
+            AccesoDatos.TeacherGrade teacherGradeAD = new AccesoDatos.TeacherGrade();
+            return teacherGradeAD.getListGradesForIdTeacher(teacher_id);
+        }
+
+        public int getCountGradesForIdTeacher(int teacher_id)
+        {
+            DataTable valores; int valor;
+            AccesoDatos.TeacherGrade teacherGradeAD = new AccesoDatos.TeacherGrade();
+            valores = teacherGradeAD.getListGradesForIdTeacher(teacher_id);
+            valor = valores.Rows.Count;
+            return valor;
+        }
     }
 }

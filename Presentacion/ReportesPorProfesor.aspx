@@ -38,14 +38,14 @@
                                         <div class="row">
                                             <div class="col-md-8">
                                                 <div class="text-center"><h4>Numero de Grados por DOCENTE</h4></div>
-                                                <div class="text-center"><h5>Total Grados ingresados: <asp:Label ID="lblCountTeachers" runat="server" Text=""></asp:Label></h5></div>
+                                                <%--<div class="text-center"><h5>Total Grados ingresados: <asp:Label ID="lblCountTeachers" runat="server" Text=""></asp:Label></h5></div>--%>
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
                                                                 <th>DOCENTE</th>
                                                                 <th>Num. Grados a su cargo</th>
-                                                                <th>%</th>
+                                                                <th>Num. Secciones</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>

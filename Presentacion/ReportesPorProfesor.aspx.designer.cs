@@ -22,15 +22,6 @@ namespace Presentacion {
         protected global::Presentacion.UscControl.AdminMenuLeftRepo AdminMenuLeftRepo1;
         
         /// <summary>
-        /// Control lblCountTeachers.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCountTeachers;
-        
-        /// <summary>
         /// Control lblNumGradesForTeacher.
         /// </summary>
         /// <remarks>
