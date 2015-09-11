@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace LogicaNegocio
 {
@@ -44,6 +45,13 @@ namespace LogicaNegocio
 
             microred.deleteMicrored(idMicrored);
            return true;
+        }
+
+        public DataTable getCountMicroredesForAgent()
+        {
+
+            AccesoDatos.Microred acompClaseAD = new AccesoDatos.Microred();
+            return acompClaseAD.getCountMicroredesForAgent();
         }
     }
 }

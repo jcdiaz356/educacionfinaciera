@@ -14,7 +14,7 @@
             </div>
             <% 
                 int idContent = Convert.ToInt16(Request.QueryString["id"]);
-                String Active1 = "", Active2 = "", Active3 = "", Active4 = "", Active5 = "", Active6 = "";
+                String Active1 = "", Active2 = "", Active3 = "", Active4 = "", Active5 = "", Active6 = "", Active7 = "";
                 switch (idContent)
                 {
                     case 1:
@@ -35,6 +35,9 @@
                     case 6:
                         Active6 = "active";
                         break;
+                    case 7:
+                        Active7 = "active";
+                        break;
                 }
             %>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,7 +49,7 @@
                     <li class="<% Response.Write(Active4); %>"><a href="ReportesPorProfesor.aspx?id=4">Profesores <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
                     <li class="<% Response.Write(Active5); %>"><a href="ReporteVisitasIE.aspx?id=5">VISITAS IE <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
                     <li class="<% Response.Write(Active6); %>"><a href="ReporteAcomClases.aspx?id=6">ACOMPAÑA A CLASES <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
-                    
+                    <li class="<% Response.Write(Active7); %>"><a href="ReporteMicroredes.aspx?id=6">MICROREDES <div class="triangulo_top_right" ></div><span class="sr-only">(current)</span></a></li>
                     
                 </ul>
             </div><!-- /.navbar-collapse -->

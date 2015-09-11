@@ -240,6 +240,7 @@
     <Content Include="PasswordUser.aspx" />
     <Content Include="ReporteAcomClases.aspx" />
     <Content Include="ReporteConsolidado.aspx" />
+    <Content Include="ReporteMicroredes.aspx" />
     <Content Include="ReportePorAsesor.aspx" />
     <Content Include="ReportesPorProfesor.aspx" />
     <Content Include="ReporteVisitasIE.aspx" />
@@ -517,6 +518,13 @@
     </Compile>
     <Compile Include="ReporteConsolidado.aspx.designer.cs">
       <DependentUpon>ReporteConsolidado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMicroredes.aspx.cs">
+      <DependentUpon>ReporteMicroredes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteMicroredes.aspx.designer.cs">
+      <DependentUpon>ReporteMicroredes.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportePorAsesor.aspx.cs">
       <DependentUpon>ReportePorAsesor.aspx</DependentUpon>
