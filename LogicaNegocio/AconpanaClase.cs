@@ -52,5 +52,19 @@ namespace LogicaNegocio
             AccesoDatos.AconpanaClase acompClaseAD = new AccesoDatos.AconpanaClase();
             return acompClaseAD.getCountAcompForAgent();
         }
+
+        public DataTable getCountAcompForTeacher()
+        {
+
+            AccesoDatos.AconpanaClase acompClaseAD = new AccesoDatos.AconpanaClase();
+            return acompClaseAD.getCountAcompForTeacher();
+        }
+
+        public int countBloquesForIdTeacher(int teacher_id)
+        {
+            AccesoDatos.AconpanaClase aconpanaClase = new AccesoDatos.AconpanaClase();
+            return aconpanaClase.getCountBloquesForIdTeacher(teacher_id);
+
+        }
     }
 }
