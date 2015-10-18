@@ -63,7 +63,7 @@ namespace LogicaNegocio
         public int countBloquesForIdTeacher(int teacher_id)
         {
             AccesoDatos.AconpanaClase aconpanaClase = new AccesoDatos.AconpanaClase();
-            return aconpanaClase.getCountBloquesForIdTeacher(teacher_id);
+            return aconpanaClase.getTemasForIdTeacher(teacher_id).Rows.Count;
 
         }
     }

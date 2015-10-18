@@ -339,33 +339,28 @@ namespace AccesoDatos
 
         }
 
-        public int getCountBloquesForIdTeacher(int teacher_id)
+        public DataTable getTemasForIdTeacher(int teacher_id)
         {
-            
+            Dt = new DataTable();
             Cmd = new SqlCommand();
             Cmd.Connection = Conn;
-            int total_rows = 0;
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_BLOQUES_FOR_IDTEACHER";
+                Cmd.CommandText = "PA_GET_TEMAS_FOR_IDTEACHER";
                 Cmd.Parameters.Add("@teacher_id", SqlDbType.Int).Value = teacher_id;
-
                 Dtr = Cmd.ExecuteReader();
+                Dt.Constraints.Clear();
+                Dt.BeginLoadData();
+                Dt.Load(Dtr);
+                Dtr.Close();
 
-                while (Dtr.Read())
-                {
-
-                    total_rows = Convert.ToInt32(Dtr["Num_fichas"]);
-
-                }
-                Conn.Close();
             }
             catch (Exception e)
             {
                 Console.WriteLine("{0} Exception caught.", e);
             }
-            return total_rows;
+            return Dt;
 
         }
     }

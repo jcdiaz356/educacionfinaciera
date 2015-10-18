@@ -8,12 +8,16 @@ using System.Data;
 
 namespace Presentacion
 {
+
+
     public partial class ReporteAcomClases : System.Web.UI.Page
     {
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             DataTable NumVisitasForAsesor, NumVisitasForTeacher;
-            int NumAcomp;
+            int NumAcomp,NumSesiones,contador;
             double porcNumAcomp, NumAcompParcial;
             LogicaNegocio.AconpanaClase acompClases = new LogicaNegocio.AconpanaClase();
             if (Request.Params["opcion"] == "asesor")
@@ -39,25 +43,27 @@ namespace Presentacion
 
             if (Request.Params["opcion"] == "profesor")
             {
+                contador = 0;
                 NumAcomp = acompClases.countRowsAconpanaClase();
                 lblNumAcomProfe.Text = Convert.ToString(NumAcomp);
                 NumVisitasForTeacher = acompClases.getCountAcompForTeacher();
                 foreach (DataRow fila in NumVisitasForTeacher.Rows)
                 {
-                    ModeloNegocio.Docente docenteMN = new ModeloNegocio.Docente();
-                    LogicaNegocio.Docente docenteLN = new LogicaNegocio.Docente();
+                    contador ++;
                     
-
-                    docenteMN = docenteLN.getDocenteId(Convert.ToInt32(fila["docente_id"]));
-                    NumAcompParcial = Convert.ToInt32(fila["Num_fichas"]);
-                    porcNumAcomp = (NumAcompParcial / NumAcomp) * 100;
                     lblNumAcompaForProfesor.Text += "<tr>";
-                    lblNumAcompaForProfesor.Text += "<td>" + docenteMN.FullName + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td>" + Convert.ToString(contador) + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td>" + fila["codigo"] + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td>" + fila["name"] + "</td>";
                     lblNumAcompaForProfesor.Text += "<td>" + fila["Num_fichas"].ToString() + "</td>";
-                    lblNumAcompaForProfesor.Text += "<td>" + String.Format("{0:0.00}", porcNumAcomp) + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td>" + fila["numtemas"].ToString() + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td>" + fila["numsesiones"].ToString() + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td>" + fila["intervenciones"].ToString() + "</td>";
                     lblNumAcompaForProfesor.Text += "</tr>";
                 }
             }
+
+            
             
         }
     }
