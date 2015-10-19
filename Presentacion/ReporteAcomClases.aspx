@@ -33,7 +33,7 @@
                                                 <a href="?opcion=asesor&id=6"><button type="button" class="btn btn-primary">Por Asesor</button></a>
                                                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                                                 <a href="?opcion=profesor&id=6"><button type="button" class="btn btn-primary">Por Profesor</button></a>
-                                                
+                                                <a href="?opcion=temas&id=6"><button type="button" class="btn btn-primary">Por Temas</button></a>
                                             </div>
                                         </div>
                                         
@@ -103,6 +103,37 @@
                                             </div>
                                         <%} %>
 
+                                        <%if (Request.Params["opcion"] == "temas")
+                                          {%>
+                                            <div class="row">
+                                                <div class="col-md-12 text-center">
+                                                    <h3>
+                                                    Numero de Profesores por Tema</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="text-center"><h4>Participan en el Juego</h4></div>
+                                                    <div class="text-center"><h4>Numero de colegios: <asp:Label ID="NumColJuego" runat="server" Text="Num"></asp:Label></h4></div>
+                                                    <div class="text-center"><h4>Numero de profesores: <asp:Label ID="NumProfJuego" runat="server" Text="Num"></asp:Label></h4></div>
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Orden</th>
+                                                                    <th>Boques temáticos</th>
+                                                                    <th>Nro. de sesiones aplicadas</th>
+                                                                    <th>Nro. docentes</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <asp:Label ID="lblNumAcompaForTema" runat="server" Text=""></asp:Label>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <%} %>
                                         
                                     </div>
                                 </div>

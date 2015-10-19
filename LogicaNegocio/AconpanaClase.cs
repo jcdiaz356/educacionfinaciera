@@ -66,5 +66,19 @@ namespace LogicaNegocio
             return aconpanaClase.getTemasForIdTeacher(teacher_id).Rows.Count;
 
         }
+
+        public DataTable getCountTeachersForTema()
+        {
+
+            AccesoDatos.AconpanaClase acompClaseAD = new AccesoDatos.AconpanaClase();
+            return acompClaseAD.getCountTeachersForTema();
+        }
+
+        public DataTable getCountSchoolTeachersJuego()
+        {
+
+            AccesoDatos.AconpanaClase acompClaseAD = new AccesoDatos.AconpanaClase();
+            return acompClaseAD.countRowsSchoolTeachersJuego();
+        }
     }
 }

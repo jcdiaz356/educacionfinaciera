@@ -55,15 +55,36 @@ namespace Presentacion
                     lblNumAcompaForProfesor.Text += "<td>" + Convert.ToString(contador) + "</td>";
                     lblNumAcompaForProfesor.Text += "<td>" + fila["codigo"] + "</td>";
                     lblNumAcompaForProfesor.Text += "<td>" + fila["name"] + "</td>";
-                    lblNumAcompaForProfesor.Text += "<td>" + fila["Num_fichas"].ToString() + "</td>";
-                    lblNumAcompaForProfesor.Text += "<td>" + fila["numtemas"].ToString() + "</td>";
-                    lblNumAcompaForProfesor.Text += "<td>" + fila["numsesiones"].ToString() + "</td>";
-                    lblNumAcompaForProfesor.Text += "<td>" + fila["intervenciones"].ToString() + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td class=\"text-right\">" + fila["Num_fichas"].ToString() + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td class=\"text-right\">" + fila["numtemas"].ToString() + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td class=\"text-right\">" + fila["numsesiones"].ToString() + "</td>";
+                    lblNumAcompaForProfesor.Text += "<td class=\"text-right\">" + fila["intervenciones"].ToString() + "</td>";
                     lblNumAcompaForProfesor.Text += "</tr>";
                 }
             }
 
-            
+            if (Request.Params["opcion"] == "temas")
+            {
+                contador = 0;
+                DataTable countSchoolsTeachers = acompClases.getCountSchoolTeachersJuego();
+                foreach (DataRow fila0 in countSchoolsTeachers.Rows)
+                {
+                    NumColJuego.Text = Convert.ToString(fila0["Num_colegios"]);
+                    NumProfJuego.Text = Convert.ToString(fila0["Num_docentes"]);
+                }
+                NumVisitasForTeacher = acompClases.getCountTeachersForTema();
+                foreach (DataRow fila in NumVisitasForTeacher.Rows)
+                {
+                    contador++;
+
+                    lblNumAcompaForTema.Text += "<tr>";
+                    lblNumAcompaForTema.Text += "<td>" + Convert.ToString(contador) + "</td>";
+                    lblNumAcompaForTema.Text += "<td>" + fila["tema"] + "</td>";
+                    lblNumAcompaForTema.Text += "<td class=\"text-right\">" + fila["Num_fichas"] + "</td>";
+                    lblNumAcompaForTema.Text += "<td class=\"text-right\">" + fila["numdocentes"].ToString() + "</td>";
+                    lblNumAcompaForTema.Text += "</tr>";
+                }
+            }
             
         }
     }
