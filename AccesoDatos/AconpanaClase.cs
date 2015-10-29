@@ -105,6 +105,89 @@ namespace AccesoDatos
         }
 
 
+        public List<ModeloNegocio.AconpanaClase> getAllAconpanaClasePorDocente(int docente_id,int registroAMostrar, int registroAEmpezar)
+        {
+            List<ModeloNegocio.AconpanaClase> lista = new List<ModeloNegocio.AconpanaClase>();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "PA_LISTA_ACONPANAMIENTO_CLASE_POR_DOCENTE_ID";
+                Cmd.Parameters.Add("@docente_id", SqlDbType.Int).Value = docente_id;
+                Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
+                Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
+
+                Dtr = Cmd.ExecuteReader();
+
+                while (Dtr.Read())
+                {
+
+
+                    ModeloNegocio.AconpanaClase aconpanaClase = new ModeloNegocio.AconpanaClase();
+                    aconpanaClase.Id = Convert.ToInt32(Dtr["id"]);
+                    aconpanaClase.Fecha = Convert.ToDateTime(Dtr["fecha"]);
+                    aconpanaClase.Asesor_id = Convert.ToInt32(Dtr["asesor_id"]);
+                    aconpanaClase.School_id = Convert.ToInt32(Dtr["school_id"]);
+                    aconpanaClase.Docente_id = Convert.ToInt32(Dtr["docente_id"]);
+                    aconpanaClase.Id_Grado_seccion = Convert.ToInt32(Dtr["id_grado_seccion"]);
+                    aconpanaClase.Id_sesion = Convert.ToInt32(Dtr["id_sesion"]);
+                    aconpanaClase.Id_Tema_Nombre_sesion = Convert.ToInt32(Dtr["id_tema_nombre_sesion"]);
+                    aconpanaClase.Num_estudiante = Convert.ToInt32(Dtr["num_estudiante"]);
+
+                    aconpanaClase.Sesion_planificado = Convert.ToInt32(Dtr["sesion_planificado"]);
+
+                    aconpanaClase.Motivo = Dtr["motivo"].ToString();
+                    aconpanaClase.Desarrollo_innovacion = Convert.ToInt32(Dtr["desarrollo_innovacion"]);
+                    aconpanaClase.Recursos_informaticos = Dtr["recursos_informaticos"].ToString();
+                    aconpanaClase.Recursos_audiovisuales = Dtr["recursos_audiovisuales"].ToString();
+                    aconpanaClase.Materiales_didacticos = Dtr["materiales_didacticos"].ToString();
+                    aconpanaClase.Dinamicas_utilizadas = Dtr["dinamicas_utilizadas"].ToString();
+                    aconpanaClase.Otros = Dtr["otros"].ToString();
+                    aconpanaClase.Asesor_intervino = Convert.ToInt32(Dtr["asesor_intervino"]);
+                    aconpanaClase.Como_intervino = Dtr["como_intervino"].ToString();
+                    aconpanaClase.Intervencion_colaboradores = Convert.ToInt32(Dtr["intervencion_colaboradores"]);
+
+                    aconpanaClase.Colaborador = Dtr["colaborador"].ToString();
+                    aconpanaClase.Como_intervino_colaborador = Dtr["como_intervino_colaborador"].ToString();
+                    aconpanaClase.Participa_juego = Convert.ToInt32(Dtr["participa_juego"]);
+                    aconpanaClase.Etapa = Dtr["etapa"].ToString();
+                    aconpanaClase.Razon = Dtr["razon"].ToString();
+                    aconpanaClase.Incidencia = Dtr["incidencia"].ToString();
+
+                    aconpanaClase.Created_at = Convert.ToDateTime(Dtr["created_at"]);
+                    aconpanaClase.Updated_at = Convert.ToDateTime(Dtr["updated_at"]);
+
+
+
+
+                    ////users.Type = Dtr["type"].ToString();
+                    //microred.Email = Dtr["email"].ToString();
+
+                    //if (DBNull.Value.Equals(Dtr["created_at"]))
+                    //{
+                    //    users.FechaCreado = DateTime.Now;
+                    //}
+                    //else
+                    //{
+                    //    users.FechaCreado = DateTime.Parse(Dtr["created_at"].ToString());
+                    //}
+
+
+
+
+                    lista.Add(aconpanaClase);
+                }
+                Conn.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return lista;
+
+        }
+
         public ModeloNegocio.AconpanaClase getAconpanaClaseId(int aconpanaClaseid)
         {
 

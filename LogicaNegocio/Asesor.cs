@@ -38,6 +38,13 @@ namespace LogicaNegocio
             return asesor.getAsesorId(assesor_id);
         }
 
+
+        public ModeloNegocio.Asesor getAsesorCode(string code)
+        {
+            AccesoDatos.Asesor asesor = new AccesoDatos.Asesor();
+            return asesor.getAsesorCode(code);
+        }
+
         public void getAsesor(ref ModeloNegocio.Asesor ObjAsesor)
         {
             AccesoDatos.User user = new AccesoDatos.User();

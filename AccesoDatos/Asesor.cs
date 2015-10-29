@@ -190,6 +190,76 @@ namespace AccesoDatos
             
         }
 
+
+        public ModeloNegocio.Asesor getAsesorCode(string code)
+        {
+
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            ModeloNegocio.Asesor asesor = new ModeloNegocio.Asesor();
+            try
+            {
+
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "PA_LISTA_USER_CODE";
+                Cmd.Parameters.Add("@code", SqlDbType.VarChar).Value = code;
+
+                Dtr = Cmd.ExecuteReader();
+
+                while (Dtr.Read())
+                {
+
+                    asesor.id = Convert.ToInt32(Dtr["id"]);
+                    asesor.FullName = Dtr["name"].ToString();
+                    asesor.Codigo = Dtr["codigo"].ToString();
+                    asesor.Email = Dtr["email"].ToString();
+                    asesor.Telefono = Dtr["telefono"].ToString();
+                    asesor.Grupo = Dtr["grupo"].ToString();
+                    asesor.Password = Dtr["password"].ToString();
+                    asesor.Selection = Convert.ToByte(Dtr["selection"]);
+
+                    //users.Type = Dtr["type"].ToString();
+
+
+                    if (DBNull.Value.Equals(Dtr["created_at"]))
+                    {
+                        asesor.FechaCreado = DateTime.Now;
+                    }
+                    else
+                    {
+                        asesor.FechaCreado = DateTime.Parse(Dtr["created_at"].ToString());
+                    }
+
+                    if (DBNull.Value.Equals(Dtr["updated_at"]))
+                    {
+                        asesor.FechaActualizado = DateTime.Now;
+                    }
+                    else
+                    {
+                        asesor.FechaActualizado = DateTime.Parse(Dtr["updated_at"].ToString());
+                    }
+
+
+                    ModeloNegocio.TypeUser typeUser = new ModeloNegocio.TypeUser();
+                    typeUser.Id = Convert.ToInt16(Dtr["id_type"]);
+                    typeUser.Name = Dtr["name_type_user"].ToString();
+
+                    asesor.typeUser = typeUser;
+
+                    //lista.Add(users);
+                }
+                Conn.Close();
+
+                return asesor;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+                return asesor;
+            }
+
+        }
+
         public bool setPasswordUser(int assesor_id, string email , string password )
         {
 

@@ -15,6 +15,16 @@ namespace LogicaNegocio
             //return userSchool.updateSelectSchoolForIduser(idSchool, value);
             return aconpanaClase.getAllAconpanaClase(registroAMostrar, registroAEmpezar);
         }
+
+
+        public List<ModeloNegocio.AconpanaClase> getAllAconpanaClasePorDocente(int docente_id,int registroAMostrar, int registroAEmpezar)
+        {
+            AccesoDatos.AconpanaClase aconpanaClase = new AccesoDatos.AconpanaClase();
+            //AccesoDatos.UserSchool userSchool = new AccesoDatos.UserSchool();
+            //return userSchool.updateSelectSchoolForIduser(idSchool, value);
+            return aconpanaClase.getAllAconpanaClasePorDocente(docente_id,registroAMostrar, registroAEmpezar);
+        }
+
         public int insertAconpanaClase(ModeloNegocio.AconpanaClase ObjAconpanaClase)
         {
             AccesoDatos.AconpanaClase aconpanaClase = new AccesoDatos.AconpanaClase();

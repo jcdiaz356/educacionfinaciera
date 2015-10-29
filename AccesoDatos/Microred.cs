@@ -91,6 +91,78 @@ namespace AccesoDatos
 
         }
 
+
+        public List<ModeloNegocio.Microred> getAllMicroredesPorAsesor(int asesor_id,int registroAMostrar, int registroAEmpezar)
+        {
+            List<ModeloNegocio.Microred> lista = new List<ModeloNegocio.Microred>();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "PA_LISTA_MICROREDES_ASESOR_ID";
+                Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
+                Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
+                Cmd.Parameters.Add("@asesor_id", SqlDbType.Int).Value = asesor_id;
+
+                Dtr = Cmd.ExecuteReader();
+
+                while (Dtr.Read())
+                {
+                    ModeloNegocio.Microred microred = new ModeloNegocio.Microred();
+                    microred.Id = Convert.ToInt32(Dtr["id"]);
+                    microred.Fecha = Convert.ToDateTime(Dtr["fecha"]);
+                    microred.User_id = Convert.ToInt32(Dtr["user_id"]);
+                    microred.MicroredName = Dtr["microred"].ToString();
+                    microred.Lugar_sesion = Dtr["lugar_sesion"].ToString();
+                    microred.H_inicio = Convert.ToDateTime(Dtr["h_inicio"].ToString());
+                    microred.H_termino = Convert.ToDateTime(Dtr["h_termino"].ToString());
+                    microred.Num_participantes = Convert.ToInt32(Dtr["num_participantes"]);
+                    microred.Educ_financiera = Dtr["educ_financiera"].ToString();
+                    microred.Enfoques_edu = Dtr["enfoques_edu"].ToString();
+                    microred.Programacion_ped = Dtr["programacion_ped"].ToString();
+                    microred.Habilidad_ped = Dtr["habilidad_ped"].ToString();
+                    microred.Trabajo_grupal = Dtr["trabajo_grupal"].ToString();
+                    microred.Participativo = Dtr["participativo"].ToString();
+                    microred.Expositivo = Dtr["expositivo"].ToString();
+                    microred.Dinamicas_ludicas = Dtr["dinamicas_ludicas"].ToString();
+                    microred.Recursos_informaticos = Dtr["recursos_informaticos"].ToString();
+                    microred.Recursos_audiovisuales = Dtr["recursos_audiovisuales"].ToString();
+                    microred.Materiales_didaticos = Dtr["materiales_didacticos"].ToString();
+                    microred.Observacion = Dtr["observacion"].ToString();
+                    microred.Created_at = Convert.ToDateTime(Dtr["created_at"]);
+                    microred.Updated_at = Convert.ToDateTime(Dtr["updated_at"]);
+
+
+
+
+                    ////users.Type = Dtr["type"].ToString();
+                    //microred.Email = Dtr["email"].ToString();
+
+                    //if (DBNull.Value.Equals(Dtr["created_at"]))
+                    //{
+                    //    users.FechaCreado = DateTime.Now;
+                    //}
+                    //else
+                    //{
+                    //    users.FechaCreado = DateTime.Parse(Dtr["created_at"].ToString());
+                    //}
+
+
+
+
+                    lista.Add(microred);
+                }
+                Conn.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return lista;
+
+        }
+
         public ModeloNegocio.Microred getMicroredId(int microred_id)
         {
 

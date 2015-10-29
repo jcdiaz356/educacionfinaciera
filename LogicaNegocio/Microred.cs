@@ -17,6 +17,15 @@ namespace LogicaNegocio
             return microred.getAllMicroredes(registroAMostrar, registroAEmpezar);
         }
 
+
+        public List<ModeloNegocio.Microred> getAllMicroredesPorAsesor(int asesor_id, int registroAMostrar, int registroAEmpezar)
+        {
+            AccesoDatos.Microred microred = new AccesoDatos.Microred();
+            //AccesoDatos.UserSchool userSchool = new AccesoDatos.UserSchool();
+            //return userSchool.updateSelectSchoolForIduser(idSchool, value);
+            return microred.getAllMicroredesPorAsesor(asesor_id,registroAMostrar, registroAEmpezar);
+        }
+
         public ModeloNegocio.Microred getMicroredId(int microred_id)
         {
             AccesoDatos.Microred microred = new AccesoDatos.Microred();

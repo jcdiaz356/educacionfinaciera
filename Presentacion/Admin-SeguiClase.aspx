@@ -23,12 +23,25 @@
                                 <div class="col-md-12">
                                     <div class="cuadro-content">
                                         <div class="row">
-                                        <div class="col-md-12">
+                                            <div class="col-md-12">
                                                 <h3>Fichas de Acompañamiento en Clase</h3>
-                                               
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
                                                 <a href="Admin-SeguiNuevoClase.aspx?id=2" class="btn btn-default">
                                                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> NUEVO
                                                 </a>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <asp:TextBox ID="txtCodDocente" runat="server" CssClass="form-control" placeholder="Ingrese código Profesor"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <asp:Button ID="btnSearch" runat="server" Text="Buscar"  class="btn btn-default" OnClick="btnSearch_Click"/>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-md-12">
 
                                              <!-- Inicia ventana Modal -->
 

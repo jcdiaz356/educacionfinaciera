@@ -187,6 +187,76 @@ namespace AccesoDatos
             }
 
         }
+
+
+        public ModeloNegocio.Docente getDocenteCode(string code)
+        {
+
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            ModeloNegocio.Docente docente = new ModeloNegocio.Docente();
+            try
+            {
+
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "PA_LISTA_USER_CODE";
+                Cmd.Parameters.Add("@code", SqlDbType.VarChar).Value = code;
+
+                Dtr = Cmd.ExecuteReader();
+
+                while (Dtr.Read())
+                {
+
+                    docente.id = Convert.ToInt32(Dtr["id"]);
+                    docente.FullName = Dtr["name"].ToString();
+                    docente.Codigo = Dtr["codigo"].ToString();
+                    docente.Email = Dtr["email"].ToString();
+                    docente.Telefono = Dtr["telefono"].ToString();
+
+                    docente.Password = Dtr["password"].ToString();
+
+
+                    //users.Type = Dtr["type"].ToString();
+
+
+                    if (DBNull.Value.Equals(Dtr["created_at"]))
+                    {
+                        docente.FechaCreado = DateTime.Now;
+                    }
+                    else
+                    {
+                        docente.FechaCreado = DateTime.Parse(Dtr["created_at"].ToString());
+                    }
+
+                    if (DBNull.Value.Equals(Dtr["updated_at"]))
+                    {
+                        docente.FechaActualizado = DateTime.Now;
+                    }
+                    else
+                    {
+                        docente.FechaActualizado = DateTime.Parse(Dtr["updated_at"].ToString());
+                    }
+
+
+                    ModeloNegocio.TypeUser typeUser = new ModeloNegocio.TypeUser();
+                    typeUser.Id = Convert.ToInt16(Dtr["id_type"]);
+                    typeUser.Name = Dtr["name_type_user"].ToString();
+
+                    docente.typeUser = typeUser;
+
+                    //lista.Add(users);
+                }
+                Conn.Close();
+
+                return docente;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+                return docente;
+            }
+
+        }
         public int insertDocente(ModeloNegocio.Docente ObjDocente)
         {
 

@@ -33,6 +33,15 @@ namespace LogicaNegocio
             return docente.getDocenteId(docente_id);
 
         }
+
+        public ModeloNegocio.Docente getDocenteCode(string code)
+        {
+
+            AccesoDatos.Docente docente = new AccesoDatos.Docente();
+
+            return docente.getDocenteCode(code);
+
+        }
         public int insertDocente(ModeloNegocio.Docente ObjDocente)
         {
             AccesoDatos.Docente docente = new AccesoDatos.Docente();

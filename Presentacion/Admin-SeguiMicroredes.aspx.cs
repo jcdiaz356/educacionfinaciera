@@ -14,15 +14,34 @@ namespace Presentacion
 
             LogicaNegocio.Microred microredes = new LogicaNegocio.Microred();
             List<ModeloNegocio.Microred> listMicrored = new List<ModeloNegocio.Microred>();
-
+            int NumRegistrosEmpezar;
             
-            //-------------Inicio Paginador
            
-            UscPaginador.caragaPaginador(100, Convert.ToInt32(Request.Params["pagina"]),microredes.countRowsMicroredes());
-            //---------------Fin Paginador
 
-            int NumRegistrosEmpezar = UscPaginador.RegistrosAEmpezar;
-            listMicrored = microredes.getAllMicroredes(100, UscPaginador.RegistrosAEmpezar);
+
+
+
+            if (Request.Params["asesor_id"] != null)
+            {
+                int asesor_id = Convert.ToInt32(Request.Params["asesor_id"]);
+                NumRegistrosEmpezar = 0;
+                listMicrored = microredes.getAllMicroredesPorAsesor(asesor_id, 200, UscPaginador.RegistrosAEmpezar);
+
+            }
+            else
+            {
+                //-------------Inicio Paginador
+                UscPaginador.caragaPaginador(100, Convert.ToInt32(Request.Params["pagina"]), microredes.countRowsMicroredes());
+                //---------------Fin Paginador
+
+                NumRegistrosEmpezar = UscPaginador.RegistrosAEmpezar;
+                listMicrored = microredes.getAllMicroredes(100, UscPaginador.RegistrosAEmpezar);
+            }
+
+
+
+
+
             foreach (ModeloNegocio.Microred Micro in listMicrored)
             {
                 ModeloNegocio.Asesor asesorMN = new ModeloNegocio.Asesor();
@@ -76,6 +95,17 @@ namespace Presentacion
 
 
             
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            LogicaNegocio.Asesor LNAsesor = new LogicaNegocio.Asesor();
+            ModeloNegocio.Asesor MNAsesor = new ModeloNegocio.Asesor();
+
+            MNAsesor = LNAsesor.getAsesorCode(txtCodDocente.Text);
+            string strRedirect;
+            strRedirect = "Admin-SeguiMicroredes.aspx?asesor_id=" + MNAsesor.id;
+            Response.Redirect(strRedirect, true);
         }
     }
 }

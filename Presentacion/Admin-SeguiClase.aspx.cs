@@ -11,17 +11,36 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+
+            }
             LogicaNegocio.AconpanaClase aconpanaClase = new LogicaNegocio.AconpanaClase();
             List<ModeloNegocio.AconpanaClase> listAconpanaClase = new List<ModeloNegocio.AconpanaClase>();
+            int NumRegistrosEmpezar;
 
 
-            //-------------Inicio Paginador
 
-            UscPaginador.caragaPaginador(100, Convert.ToInt32(Request.Params["pagina"]), aconpanaClase.countRowsAconpanaClase());
-            //---------------Fin Paginador
 
-            int NumRegistrosEmpezar = UscPaginador.RegistrosAEmpezar;
-            listAconpanaClase = aconpanaClase.getAllAconpanaClase(100, UscPaginador.RegistrosAEmpezar);
+            if (Request.Params["docente_id"]!= null)
+            {
+                int docente_id = Convert.ToInt32(Request.Params["docente_id"]);
+                NumRegistrosEmpezar = 0;
+                listAconpanaClase = aconpanaClase.getAllAconpanaClasePorDocente(docente_id, 200, NumRegistrosEmpezar);
+
+            }
+            else
+            {
+                //-------------Inicio Paginador
+
+                UscPaginador.caragaPaginador(100, Convert.ToInt32(Request.Params["pagina"]), aconpanaClase.countRowsAconpanaClase());
+                //---------------Fin Paginador
+
+                NumRegistrosEmpezar = UscPaginador.RegistrosAEmpezar;
+                listAconpanaClase = aconpanaClase.getAllAconpanaClase(100, UscPaginador.RegistrosAEmpezar);
+            }
+            
+
             foreach (ModeloNegocio.AconpanaClase Aconpana in listAconpanaClase)
             {
                 ModeloNegocio.Asesor asesorMN = new ModeloNegocio.Asesor();
@@ -47,6 +66,17 @@ namespace Presentacion
 
                 FilasLista.Text += "</td></tr>";
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            LogicaNegocio.Docente LNDocente = new LogicaNegocio.Docente();
+            ModeloNegocio.Docente MNDocente = new ModeloNegocio.Docente();
+
+            MNDocente=LNDocente.getDocenteCode(txtCodDocente.Text);
+            string strRedirect;
+            strRedirect = "Admin-SeguiClase.aspx?docente_id=" + MNDocente.id;
+            Response.Redirect(strRedirect, true);
         }
     }
 }
