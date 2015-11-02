@@ -60,6 +60,11 @@ namespace LogicaNegocio
             return visitaAD.getCountVisitsForSchool();
         }
 
+        public DataTable getReportAllVisitasIE()
+        {
+            AccesoDatos.VisitaIE acompClaseAD = new AccesoDatos.VisitaIE();
+            return acompClaseAD.getReportAllVisitasIE();
 
+        }
     }
 }

@@ -28,7 +28,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-4">
+                                            <div class="col-md-2">
                                                 <a href="Admin-SeguiNuevoMicroredes.aspx?id=1" class="btn btn-default">
                                                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> NUEVO
                                                 </a>
@@ -36,8 +36,18 @@
                                             <div class="col-md-4">
                                                 <asp:TextBox ID="txtCodDocente" runat="server" CssClass="form-control" placeholder="Ingrese código Asesor"></asp:TextBox>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-2">
                                                 <asp:Button ID="btnSearch" runat="server" Text="Buscar"  class="btn btn-default" OnClick="btnSearch_Click" />
+                                            </div>
+
+                                            <div class="col-md-4">
+                                               
+                                                <asp:LinkButton  ID="btnReport" runat="server" Text=""  class="btn btn-default " OnClick="btnReport_Click"  >
+                                                   <span class="glyphicon glyphicon-save glyphicon-align-left" aria-hidden="true"></span> Reporte Excel
+                                                </asp:LinkButton>
+
+                                               
+                                               
                                             </div>
                                         </div>
                                         <div class="row">

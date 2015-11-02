@@ -30,7 +30,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_ACONPANAMIENTO_CLASE";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_ACONPANAMIENTO_CLASE";
                 Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
                 Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
                 
@@ -113,7 +113,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_ACONPANAMIENTO_CLASE_POR_DOCENTE_ID";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_ACONPANAMIENTO_CLASE_POR_DOCENTE_ID";
                 Cmd.Parameters.Add("@docente_id", SqlDbType.Int).Value = docente_id;
                 Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
                 Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
@@ -200,7 +200,7 @@ namespace AccesoDatos
                 //ModeloNegocio.AconpanaClase aconpanaClase = new ModeloNegocio.AconpanaClase();
 
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_GET_ACOMPANA_CLASE_ID";
+                Cmd.CommandText = "[otaku_bcp].PA_GET_ACOMPANA_CLASE_ID";
                 Cmd.Parameters.Add("@acompana_id", SqlDbType.Int).Value = aconpanaClaseid;
 
                 Dtr = Cmd.ExecuteReader();
@@ -272,7 +272,7 @@ namespace AccesoDatos
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
 
-                Cmd.CommandText = "PA_ING_ACONPANA_CLASE";
+                Cmd.CommandText = "[otaku_bcp].PA_ING_ACONPANA_CLASE";
 
                 //Cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = ObjAconpanaClase.Fecha.ToString("dd/MM/yyyy");
                 Cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = ObjAconpanaClase.Fecha.ToString("yyyy-MM-dd"); ;
@@ -333,7 +333,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_ROWS_ACONPANAMIENTO_CLASE";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_ROWS_ACONPANAMIENTO_CLASE";
                
                 Dtr = Cmd.ExecuteReader();
 
@@ -360,7 +360,7 @@ namespace AccesoDatos
             {
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_DELETE_ACONPANA_CLASE";
+                Cmd.CommandText = "[otaku_bcp].PA_DELETE_ACONPANA_CLASE";
                 Cmd.Parameters.Add("@idAconpanaClase", SqlDbType.Int).Value = idAconpanaClase;
                 Cmd.ExecuteNonQuery();
                 Conn.Close();
@@ -382,7 +382,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_ACOMPANA_FOR_ASESOR";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_ACOMPANA_FOR_ASESOR";
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();
                 Dt.BeginLoadData();
@@ -406,7 +406,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_ACOMPANA_FOR_TEACHER";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_ACOMPANA_FOR_TEACHER";
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();
                 Dt.BeginLoadData();
@@ -430,7 +430,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_GET_TEMAS_FOR_IDTEACHER";
+                Cmd.CommandText = "[otaku_bcp].PA_GET_TEMAS_FOR_IDTEACHER";
                 Cmd.Parameters.Add("@teacher_id", SqlDbType.Int).Value = teacher_id;
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();
@@ -455,7 +455,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "GET_COUNT_TEACHERS_FOR_TEMA";
+                Cmd.CommandText = "[otaku_bcp].GET_COUNT_TEACHERS_FOR_TEMA";
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();
                 Dt.BeginLoadData();
@@ -479,7 +479,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_SCHOOL_TEACHER_JUEGO";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_SCHOOL_TEACHER_JUEGO";
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();
                 Dt.BeginLoadData();
@@ -493,5 +493,32 @@ namespace AccesoDatos
             }
             return Dt;
         }
+
+        public DataTable getReportAllAconpanaClase()
+        {
+            Dt = new DataTable();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "[otaku_bcp].PA_REPORT_ALL_ACONPANA_CLASE";
+                Dtr = Cmd.ExecuteReader();
+                Dt.Constraints.Clear();
+                Dt.BeginLoadData();
+                Dt.Load(Dtr);
+                Dtr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return Dt;
+
+        }
     }
+
+
+
 }

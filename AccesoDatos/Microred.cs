@@ -29,7 +29,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_MICROREDES";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_MICROREDES";
                 Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
                 Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
                 
@@ -100,7 +100,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_MICROREDES_ASESOR_ID";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_MICROREDES_ASESOR_ID";
                 Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
                 Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
                 Cmd.Parameters.Add("@asesor_id", SqlDbType.Int).Value = asesor_id;
@@ -173,7 +173,7 @@ namespace AccesoDatos
             {
 
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_GET_MICRORED_ID";
+                Cmd.CommandText = "[otaku_bcp].PA_GET_MICRORED_ID";
                 Cmd.Parameters.Add("@microred_id", SqlDbType.Int).Value = microred_id;
 
                 Dtr = Cmd.ExecuteReader();
@@ -233,7 +233,7 @@ namespace AccesoDatos
                 Cmd.Connection = Conn;
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_ING_MICRORED";
+                Cmd.CommandText = "[otaku_bcp].PA_ING_MICRORED";
                 
                 //Cmd.Parameters.Add("@fecha", SqlDbType.Date).Value = ObjMicrored.Fecha.ToString("dd/MM/yyyy");
                 Cmd.Parameters.Add("@fecha", SqlDbType.Date).Value = ObjMicrored.Fecha.ToString("yyyy-MM-dd");
@@ -287,7 +287,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_ROWS_MICROREDES";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_ROWS_MICROREDES";
                
                 Dtr = Cmd.ExecuteReader();
 
@@ -314,7 +314,7 @@ namespace AccesoDatos
             {
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_DELETE_MICRORED";
+                Cmd.CommandText = "[otaku_bcp].PA_DELETE_MICRORED";
                 Cmd.Parameters.Add("@idmicrored", SqlDbType.Int).Value = idMicrored;
                 Cmd.ExecuteNonQuery();
                 Conn.Close();
@@ -336,7 +336,31 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_MICROREDES_FOR_ASESOR";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_MICROREDES_FOR_ASESOR";
+                Dtr = Cmd.ExecuteReader();
+                Dt.Constraints.Clear();
+                Dt.BeginLoadData();
+                Dt.Load(Dtr);
+                Dtr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return Dt;
+
+        }
+
+        public DataTable getReportAllMicroredes()
+        {
+            Dt = new DataTable();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "[otaku_bcp].PA_REPORT_ALL_MICROREDES";
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();
                 Dt.BeginLoadData();

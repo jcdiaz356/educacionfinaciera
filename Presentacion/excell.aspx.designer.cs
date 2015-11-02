@@ -10,42 +10,33 @@
 namespace Presentacion {
     
     
-    public partial class Admin_SeguiVisitas {
+    public partial class excell {
         
         /// <summary>
-        /// AdminMenuLeftSegui1 control.
+        /// cmdExportar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Presentacion.UscControl.AdminMenuLeftSegui AdminMenuLeftSegui1;
+        protected global::System.Web.UI.WebControls.Button cmdExportar;
         
         /// <summary>
-        /// btnReport control.
+        /// FilasListaAsesores control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnReport;
+        protected global::System.Web.UI.WebControls.Label FilasListaAsesores;
         
         /// <summary>
-        /// FilasLista control.
+        /// cmdExportar4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FilasLista;
-        
-        /// <summary>
-        /// UscPaginador control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Presentacion.UscControl.Paginador UscPaginador;
+        protected global::System.Web.UI.WebControls.Button cmdExportar4;
     }
 }

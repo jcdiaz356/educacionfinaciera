@@ -29,7 +29,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_USERS";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_USERS";
                 Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
                 Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
                 Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = 7;
@@ -80,7 +80,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_ALL_USERS";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_ALL_USERS";
                
                 Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = 7;
                 Dtr = Cmd.ExecuteReader();
@@ -131,7 +131,7 @@ namespace AccesoDatos
             {
                
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_USER_ID";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_USER_ID";
                 Cmd.Parameters.Add("@user_id", SqlDbType.Int).Value = assesor_id;
                 
                 Dtr = Cmd.ExecuteReader();
@@ -201,7 +201,7 @@ namespace AccesoDatos
             {
 
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_USER_CODE";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_USER_CODE";
                 Cmd.Parameters.Add("@code", SqlDbType.VarChar).Value = code;
 
                 Dtr = Cmd.ExecuteReader();
@@ -273,7 +273,7 @@ namespace AccesoDatos
                 String passwordNewEncripta = encriptaPassword.Encrypt(password);
 
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_ING_PASSWORD_USER";
+                Cmd.CommandText = "[otaku_bcp].PA_ING_PASSWORD_USER";
                 Cmd.Parameters.Add("@user_id", SqlDbType.Int).Value = assesor_id;
                 Cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
                 Cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = passwordNewEncripta;
@@ -300,7 +300,7 @@ namespace AccesoDatos
                 Cmd.Connection = Conn;
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_ING_ASESOR";
+                Cmd.CommandText = "[otaku_bcp].PA_ING_ASESOR";
                 Cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = ObjAsesor.Codigo;
                 Cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = ObjAsesor.FullName;
                 Cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = ObjAsesor.Telefono;
@@ -340,7 +340,7 @@ namespace AccesoDatos
             {
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_OBT_ELIMINA_USER";
+                Cmd.CommandText = "[otaku_bcp].PA_OBT_ELIMINA_USER";
                 Cmd.Parameters.Add("@iduser", SqlDbType.Int).Value = iduser;
                 Cmd.ExecuteNonQuery();
                 Conn.Close();
@@ -362,7 +362,7 @@ namespace AccesoDatos
             {
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_OBT_UPDATE_ASESOR";
+                Cmd.CommandText = "[otaku_bcp].PA_OBT_UPDATE_ASESOR";
                 Cmd.Parameters.Add("@iduser", SqlDbType.Int).Value = ObjAsesor.id;
                 Cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = ObjAsesor.Codigo;
                 Cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = ObjAsesor.FullName;
@@ -388,7 +388,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_ROWS_ASESOR";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_ROWS_ASESOR";
 
                 Dtr = Cmd.ExecuteReader();
 

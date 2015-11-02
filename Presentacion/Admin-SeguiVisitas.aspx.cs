@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -43,6 +45,56 @@ namespace Presentacion
 
                 FilasLista.Text += "</td></tr>";
             }
+        }
+
+        protected void btnReport_Click(object sender, EventArgs e)
+        {
+            LogicaNegocio.VisitaIE aconpanaClase = new LogicaNegocio.VisitaIE();
+            // List<ModeloNegocio.Asesor> listUsuario = new List<ModeloNegocio.Asesor>();
+
+            // NOW ASSIGN DATA TO A DATAGRID.
+            DataGrid dg = new DataGrid();
+            dg.DataSource = aconpanaClase.getReportAllVisitasIE();
+            dg.DataBind();
+
+            // THE EXCEL FILE.
+            string sFileName = "VisitasIE-" + System.DateTime.Now.Date + "-.xls";
+            sFileName = sFileName.Replace("/", "");
+
+            // SEND OUTPUT TO THE CLIENT MACHINE USING "RESPONSE OBJECT".
+            Encoding encoding = Encoding.UTF8;
+            Response.ClearContent();
+            Response.Buffer = true;
+            //Response.Charset = encoding.EncodingName;
+            //Response.ContentEncoding = System.Text.Encoding.UTF8;
+
+            Response.Charset = encoding.EncodingName;
+            Response.ContentEncoding = System.Text.Encoding.GetEncoding("Windows-1252");
+            Response.AddHeader("content-disposition", "attachment; filename=" + sFileName);
+            Response.ContentType = "application/vnd.ms-excel";
+            //Response.ContentType = "application/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+            //Response.AppendHeader("content-disposition", "attachment; filename=myfile.xlsx");
+            EnableViewState = false;
+
+            System.IO.StringWriter objSW = new System.IO.StringWriter();
+            System.Web.UI.HtmlTextWriter objHTW = new System.Web.UI.HtmlTextWriter(objSW);
+
+            dg.HeaderStyle.Font.Bold = true;     // SET EXCEL HEADERS AS BOLD.
+            dg.HeaderStyle.ForeColor = Color.White;
+            dg.HeaderStyle.BackColor = Color.Blue;
+
+            dg.RenderControl(objHTW);
+
+            // STYLE THE SHEET AND WRITE DATA TO IT.
+            Response.Write("<style> TABLE { border:solid 1px #999; } " +
+                "TD { border:solid 1px #000000; text-align:center } </style>");
+            Response.Write(objSW.ToString());
+
+            // ADD A ROW AT THE END OF THE SHEET SHOWING A RUNNING TOTAL OF PRICE.
+            //Response.Write("<table><tr><td><b>Total: </b></td><td></td><td><b>" +
+            //dTotalPrice.ToString("N2") + "</b></td></tr></table>");
+
+            Response.End();
         }
     }
 }

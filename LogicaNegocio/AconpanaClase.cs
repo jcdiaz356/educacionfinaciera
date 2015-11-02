@@ -90,5 +90,12 @@ namespace LogicaNegocio
             AccesoDatos.AconpanaClase acompClaseAD = new AccesoDatos.AconpanaClase();
             return acompClaseAD.countRowsSchoolTeachersJuego();
         }
+
+        public DataTable getReportAllAconpanaClase()
+        {
+            AccesoDatos.AconpanaClase acompClaseAD = new AccesoDatos.AconpanaClase();
+            return acompClaseAD.getReportAllAconpanaClase();
+
+        }
     }
 }

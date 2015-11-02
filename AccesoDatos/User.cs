@@ -61,7 +61,7 @@ namespace AccesoDatos
                 ModeloNegocio.Asesor user = new ModeloNegocio.Asesor();
                 Cmd = new SqlCommand();
                 Cmd.Connection = Conn;
-                Cmd.CommandText = "select [user].id, [user].email,  [user].name, [user].password, [user].id_type, type_user.name AS name_type from [user] INNER JOIN type_user ON ([user].id_type = type_user.id) where email=@email and password=@password ";
+                Cmd.CommandText = "select [user].id, [user].email,  [user].name, [user].password, [user].id_type, type_user.name AS name_type from [otaku_bcp].[user] INNER JOIN [otaku_bcp].type_user ON ([user].id_type = type_user.id) where email=@email and password=@password ";
                 //String passWordEncriptado;
                 //passWordEncriptado = encriptaPassword(password);
 

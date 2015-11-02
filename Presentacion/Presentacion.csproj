@@ -39,7 +39,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\Libreria\Exportaar a excell\NPOI 2.2.0.0\dotnet4\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\Libreria\Exportaar a excell\NPOI 2.2.0.0\dotnet4\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\..\Libreria\Exportaar a excell\NPOI 2.2.0.0\dotnet4\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\..\Libreria\Exportaar a excell\NPOI 2.2.0.0\dotnet4\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\..\Libreria\Exportaar a excell\NPOI 2.2.0.0\dotnet4\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -167,6 +182,7 @@
     <Content Include="css\mapa-styles.min.css" />
     <Content Include="css\stylesheet.min.css" />
     <Content Include="escolares-informan.aspx" />
+    <Content Include="excell.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="galeria-detalle.aspx" />
     <Content Include="galeria.aspx" />
@@ -495,6 +511,13 @@
       <DependentUpon>Admin-Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Global.cs" />
+    <Compile Include="excell.aspx.cs">
+      <DependentUpon>excell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="excell.aspx.designer.cs">
+      <DependentUpon>excell.aspx</DependentUpon>
+    </Compile>
     <Compile Include="galeria-detalle.aspx.cs">
       <DependentUpon>galeria-detalle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -722,6 +745,7 @@
     <Content Include="img\imagen2_tmp23552" />
     <Content Include="img\imagen3_tmp6162" />
     <Content Include="lib\mapa\burbujas.json" />
+    <None Include="Properties\PublishProfiles\BCPPublicacion.pubxml" />
     <None Include="Properties\PublishProfiles\EducacionFinanciera.pubxml" />
     <None Include="Properties\PublishProfiles\webBCP.pubxml" />
     <None Include="Web.Debug.config">

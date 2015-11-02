@@ -62,5 +62,12 @@ namespace LogicaNegocio
             AccesoDatos.Microred acompClaseAD = new AccesoDatos.Microred();
             return acompClaseAD.getCountMicroredesForAgent();
         }
+
+        public DataTable getReportAllMicroredes()
+        {
+            AccesoDatos.Microred acompClaseAD = new AccesoDatos.Microred();
+            return acompClaseAD.getReportAllMicroredes();
+
+        }
     }
 }
