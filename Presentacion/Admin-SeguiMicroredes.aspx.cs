@@ -55,6 +55,7 @@ namespace Presentacion
 
                 FilasListaMicroredes.Text += "<tr id='" + Micro.Id + "'>";
                 FilasListaMicroredes.Text += "<th scope=row>" + NumRegistrosEmpezar + "</th>";
+                FilasListaMicroredes.Text += "<td>" + Micro.Id + "</td>";
                 FilasListaMicroredes.Text += "<td>" + asesorMN.FullName + "</td>";
                 FilasListaMicroredes.Text += "<td>" + Micro.MicroredName + "</td>";
                 FilasListaMicroredes.Text += "<td>" + Micro.Fecha.ToString("dd-MM-yyyy") + "</td>";

@@ -81,6 +81,7 @@
                                                     <thead>
                                                     <tr>
                                                         <th>Nº</th>
+                                                        <th>ID</th>
                                                         <th>Asesor</th>
                                                         <th>Fecha de Visita</th>
                                                         <th>Operaciones</th>

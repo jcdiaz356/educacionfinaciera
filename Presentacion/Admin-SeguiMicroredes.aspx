@@ -88,6 +88,7 @@
                                                     <thead>
                                                     <tr>
                                                         <th>Nº</th>
+                                                        <th>ID</th>
                                                         <th>Asesor</th>
                                                         <th>Nombre</th>
                                                         <th>Fecha Creación</th>

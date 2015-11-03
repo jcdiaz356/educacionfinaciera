@@ -36,6 +36,7 @@ namespace Presentacion
                
                 FilasLista.Text += "<tr id='" + VisitasIE.Id + "'>";
                 FilasLista.Text += "<th scope=row>" + NumRegistrosEmpezar + "</th>";
+                FilasLista.Text += "<td>" + VisitasIE.Id + "</td>";
                 FilasLista.Text += "<td>" + asesorMN.FullName + "</td>";
                 FilasLista.Text += "<td>" + VisitasIE.Fecha.ToString("dd-MM-yyyy")  + "</td>";
                 FilasLista.Text += "<td>";
