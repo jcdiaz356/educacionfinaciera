@@ -58,6 +58,7 @@ namespace Presentacion
 
                 FilasLista.Text += "<tr id='" + Aconpana.Id + "'>";
                 FilasLista.Text += "<th scope=row>" + NumRegistrosEmpezar + "</th>";
+                FilasLista.Text += "<td>" + Aconpana.Id + "</td>";
                 FilasLista.Text += "<td>" + asesorMN.FullName + "</td>";
                 FilasLista.Text += "<td>" + docenteMN.FullName + "</td>";
                 FilasLista.Text += "<td>" + Aconpana.Fecha.ToString("dd-MM-yyyy") + "</td>";

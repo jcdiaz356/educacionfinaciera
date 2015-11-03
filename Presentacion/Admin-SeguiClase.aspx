@@ -89,6 +89,7 @@
                                                     <thead>
                                                     <tr>
                                                         <th>Nº</th>
+                                                        <th>ID</th>
                                                         <th>Asesor</th>
                                                         <th>Docente</th>
                                                         <th>Fecha</th>
