@@ -29,7 +29,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_SCHOOLS";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_SCHOOLS";
                 Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
                 Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
                 //Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = 7;
@@ -72,7 +72,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_SCHOOLS_NO_SELECT";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_SCHOOLS_NO_SELECT";
 
                 //Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = 7;
                 Dtr = Cmd.ExecuteReader();
@@ -114,7 +114,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_ALL_SCHOOLS";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_ALL_SCHOOLS";
                 
                 //Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = 7;
                 Dtr = Cmd.ExecuteReader();
@@ -157,7 +157,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_GET_DOCENTE_SCHOOL";
+                Cmd.CommandText = "[otaku_bcp].PA_GET_DOCENTE_SCHOOL";
                 Cmd.Parameters.Add("@idschool", SqlDbType.Int).Value = idShool;
 
                 //Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = 7;
@@ -192,7 +192,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_GET_DIRECTOR_SCHOOL";
+                Cmd.CommandText = "[otaku_bcp].PA_GET_DIRECTOR_SCHOOL";
                 Cmd.Parameters.Add("@idschool", SqlDbType.Int).Value = idShool;
 
                 //Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = 7;
@@ -226,7 +226,7 @@ namespace AccesoDatos
                 Cmd.Connection = Conn;
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_INGSCHOOL";
+                Cmd.CommandText = "[otaku_bcp].PA_INGSCHOOL";
                 Cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = ObjSchool.Codigo;
                 Cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = ObjSchool.Nombre;
                 Cmd.Parameters.Add("@ugel_id", SqlDbType.Int).Value = ObjSchool.Ugel_id;
@@ -277,7 +277,7 @@ namespace AccesoDatos
                 Cmd.Connection = Conn;
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_OBT_UPDATE_SCHOOL";
+                Cmd.CommandText = "[otaku_bcp].PA_OBT_UPDATE_SCHOOL";
                 Cmd.Parameters.Add("@idschool", SqlDbType.Int).Value = ObjSchool.id;
                 Cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = ObjSchool.Codigo;
                 Cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = ObjSchool.Nombre;
@@ -325,7 +325,7 @@ namespace AccesoDatos
             {
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_OBT_ELIMINA_SCHOOL";
+                Cmd.CommandText = "[otaku_bcp].PA_OBT_ELIMINA_SCHOOL";
                 Cmd.Parameters.Add("@idschool", SqlDbType.Int).Value = idSchool;
                 Cmd.ExecuteNonQuery();
                 Conn.Close();
@@ -348,7 +348,7 @@ namespace AccesoDatos
             {
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_GET_SCHOOL_ID";
+                Cmd.CommandText = "[otaku_bcp].PA_GET_SCHOOL_ID";
                 Cmd.Parameters.Add("@idschool", SqlDbType.Int).Value = ObjSchool.id;
                 Reader = Cmd.ExecuteReader();
                 if (Reader.HasRows)
@@ -564,7 +564,7 @@ namespace AccesoDatos
             {
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_GET_SCHOOL_ID";
+                Cmd.CommandText = "[otaku_bcp].PA_GET_SCHOOL_ID";
                 Cmd.Parameters.Add("@idschool", SqlDbType.Int).Value = school_id;
                 Reader = Cmd.ExecuteReader();
                 //if (Reader.HasRows)
@@ -793,7 +793,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_ROWS_SCHOOL";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_ROWS_SCHOOL";
 
                 Dtr = Cmd.ExecuteReader();
 
@@ -820,7 +820,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_SCHOOL_FOR_UGEL";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_SCHOOL_FOR_UGEL";
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();
                 Dt.BeginLoadData();
@@ -844,7 +844,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_STUDENTS_FOR_SCHOOL";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_STUDENTS_FOR_SCHOOL";
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();
                 Dt.BeginLoadData();
@@ -868,7 +868,31 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_SCHOOL_FOR_ASESOR";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_SCHOOL_FOR_ASESOR";
+                Dtr = Cmd.ExecuteReader();
+                Dt.Constraints.Clear();
+                Dt.BeginLoadData();
+                Dt.Load(Dtr);
+                Dtr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return Dt;
+
+        }
+
+        public DataTable getReportAllSchool()
+        {
+            Dt = new DataTable();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "[otaku_bcp].PA_REPORT_ALL_SCHOOL";
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();
                 Dt.BeginLoadData();

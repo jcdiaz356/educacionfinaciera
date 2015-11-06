@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -128,6 +129,12 @@ namespace LogicaNegocio
         {
             AccesoDatos.Asesor asesor = new AccesoDatos.Asesor();
             return asesor.countRowsAsesores();
+        }
+
+        public DataTable getReportAllAsesor()
+        {
+            AccesoDatos.Asesor asesor = new AccesoDatos.Asesor();
+            return asesor.getReportAllAsesor();
         }
     }
 }

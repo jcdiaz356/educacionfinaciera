@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -124,6 +125,12 @@ namespace LogicaNegocio
             AccesoDatos.Docente docente = new AccesoDatos.Docente();
             return docente.countRowsStudents();
 
+        }
+
+        public DataTable getReportAllDocente()
+        {
+            AccesoDatos.Docente asesor = new AccesoDatos.Docente();
+            return asesor.getReportAllDocente();
         }
     }
 }

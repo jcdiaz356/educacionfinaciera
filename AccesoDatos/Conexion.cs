@@ -17,7 +17,7 @@ namespace AccesoDatos
 
         private string connString = "Data Source=192.185.6.25;Initial Catalog=otakus_bcp_edu;Persist Security Info=True;User ID=otaku_bcp;Password=aYjp92#9";
        
-         //private string connString = "Data Source=PERSONAL-JAIME\\SQLEXPRESS2012;Initial Catalog=otakus_bcp_edu; Integrated Security=False;User ID=sa;Password=irmaguevara;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
+        // private string connString = "Data Source=PERSONAL-JAIME\\SQLEXPRESS2012;Initial Catalog=otakus_bcp_edu; Integrated Security=False;User ID=sa;Password=irmaguevara;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
         
         //private string connString = "Server=ttaudit.com;Port=3306;Database=ttaudit_bd;Uid=ttaudit_admin;Password=franbrsj09";
         private SqlConnection Conn = new SqlConnection();

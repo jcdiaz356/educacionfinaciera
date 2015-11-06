@@ -29,7 +29,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_USERS";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_USERS";
                 Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
                 Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
                 Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = tipoUsuario;
@@ -80,7 +80,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_ALL_USER";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_ALL_USER";
 
                 Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = tipoUsuario;
                 Dtr = Cmd.ExecuteReader();
@@ -130,7 +130,7 @@ namespace AccesoDatos
             {
 
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_USER_ID";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_USER_ID";
                 Cmd.Parameters.Add("@user_id", SqlDbType.Int).Value = director_id;
 
                 Dtr = Cmd.ExecuteReader();
@@ -197,7 +197,7 @@ namespace AccesoDatos
                 Cmd.Connection = Conn;
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_ING_DOCENTE";
+                Cmd.CommandText = "[otaku_bcp].PA_ING_DOCENTE";
                 Cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = ObjDirector.Codigo;
                 Cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = ObjDirector.FullName;
                 Cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = ObjDirector.Telefono;
@@ -234,7 +234,7 @@ namespace AccesoDatos
                 Cmd.Connection = Conn;
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_UPDATE_DOCENTE";
+                Cmd.CommandText = "[otaku_bcp].PA_UPDATE_DOCENTE";
                 Cmd.Parameters.Add("@idTeacher", SqlDbType.Int).Value = ObjDirector.id;
                 Cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = ObjDirector.Codigo;
                 Cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = ObjDirector.FullName;
@@ -269,7 +269,7 @@ namespace AccesoDatos
             {
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_OBT_ELIMINA_USER";
+                Cmd.CommandText = "[otaku_bcp].PA_OBT_ELIMINA_USER";
                 Cmd.Parameters.Add("@iduser", SqlDbType.Int).Value = iduser;
                 Cmd.ExecuteNonQuery();
                 Conn.Close();
@@ -292,7 +292,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_ROWS_TYPE_USER";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_ROWS_TYPE_USER";
                 Cmd.Parameters.Add("@IdType", SqlDbType.Int).Value = tipoUsuario;
                 Dtr = Cmd.ExecuteReader();
 
@@ -309,6 +309,54 @@ namespace AccesoDatos
                 Console.WriteLine("{0} Exception caught.", e);
             }
             return total_rows;
+        }
+
+        public DataTable getReportAllDirector()
+        {
+            Dt = new DataTable();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "[otaku_bcp].PA_REPORT_ALL_DIRECTOR";
+                Dtr = Cmd.ExecuteReader();
+                Dt.Constraints.Clear();
+                Dt.BeginLoadData();
+                Dt.Load(Dtr);
+                Dtr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return Dt;
+
+        }
+
+        public DataTable getReportAllSubDirector()
+        {
+            Dt = new DataTable();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "[otaku_bcp].PA_REPORT_ALL_SUBDIRECTOR";
+                Dtr = Cmd.ExecuteReader();
+                Dt.Constraints.Clear();
+                Dt.BeginLoadData();
+                Dt.Load(Dtr);
+                Dtr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return Dt;
+
         }
     }
 }

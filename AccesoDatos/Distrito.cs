@@ -29,7 +29,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_GET_DISTRITOS";
+                Cmd.CommandText = "[otaku_bcp].PA_GET_DISTRITOS";
                 Cmd.Parameters.Add("@idprovincia", SqlDbType.Int).Value = idProvincia;
                 Dtr = Cmd.ExecuteReader();
                 Dt.Constraints.Clear();

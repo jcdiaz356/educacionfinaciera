@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -110,6 +111,20 @@ namespace LogicaNegocio
             AccesoDatos.Director docente = new AccesoDatos.Director();
             return docente.countRows(tipoUsuario);
 
+        }
+
+        public DataTable getReportAllDirector()
+        {
+
+            AccesoDatos.Director docente = new AccesoDatos.Director();
+            return docente.getReportAllSubDirector();
+        }
+
+        public DataTable getReportAllSubDirector()
+        {
+
+            AccesoDatos.Director docente = new AccesoDatos.Director();
+            return docente.getReportAllSubDirector();
         }
     }
    

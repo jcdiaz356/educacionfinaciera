@@ -23,12 +23,24 @@
                                 <div class="col-md-12">
                                     <div class="cuadro-content">
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-lg-12">
                                                 <h3>Director</h3>
-                                               
-                                                <a href="Admin-IngDirector.aspx?id=4" class="btn btn-default">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                 <a href="Admin-IngDirector.aspx?id=4" class="btn btn-default">
                                                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> NUEVO
                                                 </a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <%-- <asp:LinkButton  ID="btnReport" runat="server" Text=""  class="btn btn-default " OnClick="btnReport_Click"  >
+                                                   <span class="glyphicon glyphicon-save glyphicon-align-left" aria-hidden="true"></span> Reporte Excel
+                                                </asp:LinkButton>--%>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
 
                                                 <!-- Inicia ventana Modal -->
 

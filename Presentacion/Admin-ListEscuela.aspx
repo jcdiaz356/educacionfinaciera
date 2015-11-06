@@ -30,13 +30,24 @@
                                 <div class="col-md-12">
                                     <div class="cuadro-content">
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-lg-12">
                                                 <h3>Escuelas</h3>
-                                               
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
                                                 <a href="Admin-IngEscuela.aspx?id=3" class="btn btn-default">
                                                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> NUEVO
                                                 </a>
-
+                                            </div>
+                                            <div class="col-md-6">
+                                                 <asp:LinkButton  ID="btnReport" runat="server" Text=""  class="btn btn-default " OnClick="btnReport_Click"  >
+                                                   <span class="glyphicon glyphicon-save glyphicon-align-left" aria-hidden="true"></span> Reporte Excel
+                                                </asp:LinkButton>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
                                                 <!-- Inicia ventana Modal -->
 
                                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

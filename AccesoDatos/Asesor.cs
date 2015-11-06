@@ -406,5 +406,30 @@ namespace AccesoDatos
             }
             return total_rows;
         }
+
+
+        public DataTable getReportAllAsesor()
+        {
+            Dt = new DataTable();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "[otaku_bcp].PA_REPORT_ALL_ASESOR";
+                Dtr = Cmd.ExecuteReader();
+                Dt.Constraints.Clear();
+                Dt.BeginLoadData();
+                Dt.Load(Dtr);
+                Dtr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return Dt;
+
+        }
     }
 }

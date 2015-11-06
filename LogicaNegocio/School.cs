@@ -123,6 +123,13 @@ namespace LogicaNegocio
             AccesoDatos.School schoolAD = new AccesoDatos.School();
             return schoolAD.getCountSchoolForAsesor();
         }
+
+        public DataTable getReportAllSchool()
+        {
+
+            AccesoDatos.School school = new AccesoDatos.School();
+            return school.getReportAllSchool();
+        }
       
     }
 }

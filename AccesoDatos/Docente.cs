@@ -28,7 +28,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_USERS";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_USERS";
                 Cmd.Parameters.Add("@RegistrosAMostrar", SqlDbType.Int).Value = registroAMostrar;
                 Cmd.Parameters.Add("@RegistrosAEmpezar", SqlDbType.Int).Value = registroAEmpezar;
                 Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = 4;
@@ -79,7 +79,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_ALL_USER";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_ALL_USER";
                
                 Cmd.Parameters.Add("@tipoUser", SqlDbType.Int).Value = 4;
                 Dtr = Cmd.ExecuteReader();
@@ -129,7 +129,7 @@ namespace AccesoDatos
             {
 
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_USER_ID";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_USER_ID";
                 Cmd.Parameters.Add("@user_id", SqlDbType.Int).Value = docente_id;
 
                 Dtr = Cmd.ExecuteReader();
@@ -199,7 +199,7 @@ namespace AccesoDatos
             {
 
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_LISTA_USER_CODE";
+                Cmd.CommandText = "[otaku_bcp].PA_LISTA_USER_CODE";
                 Cmd.Parameters.Add("@code", SqlDbType.VarChar).Value = code;
 
                 Dtr = Cmd.ExecuteReader();
@@ -266,7 +266,7 @@ namespace AccesoDatos
                 Cmd.Connection = Conn;
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_ING_DOCENTE";
+                Cmd.CommandText = "[otaku_bcp].PA_ING_DOCENTE";
                 Cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = ObjDocente.Codigo;
                 Cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = ObjDocente.FullName;
                 Cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = ObjDocente.Telefono;
@@ -303,7 +303,7 @@ namespace AccesoDatos
                 Cmd.Connection = Conn;
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_UPDATE_DOCENTE";
+                Cmd.CommandText = "[otaku_bcp].PA_UPDATE_DOCENTE";
                 Cmd.Parameters.Add("@idTeacher", SqlDbType.Int).Value = ObjDocente.id;
                 Cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = ObjDocente.Codigo;
                 Cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = ObjDocente.FullName;
@@ -338,7 +338,7 @@ namespace AccesoDatos
             {
                 Cmd.Parameters.Clear();
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_OBT_ELIMINA_USER";
+                Cmd.CommandText = "[otaku_bcp].PA_OBT_ELIMINA_USER";
                 Cmd.Parameters.Add("@iduser", SqlDbType.Int).Value = iduser;
                 Cmd.ExecuteNonQuery();
                 Conn.Close();
@@ -361,7 +361,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_ROWS_STUDENTS";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_ROWS_STUDENTS";
 
                 Dtr = Cmd.ExecuteReader();
 
@@ -388,7 +388,7 @@ namespace AccesoDatos
             try
             {
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.CommandText = "PA_COUNT_ROWS_DOCENTE";
+                Cmd.CommandText = "[otaku_bcp].PA_COUNT_ROWS_DOCENTE";
 
                 Dtr = Cmd.ExecuteReader();
 
@@ -406,5 +406,30 @@ namespace AccesoDatos
             }
             return total_rows;
         }
+
+        public DataTable getReportAllDocente()
+        {
+            Dt = new DataTable();
+            Cmd = new SqlCommand();
+            Cmd.Connection = Conn;
+            try
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "[otaku_bcp].PA_REPORT_ALL_DOCENTE";
+                Dtr = Cmd.ExecuteReader();
+                Dt.Constraints.Clear();
+                Dt.BeginLoadData();
+                Dt.Load(Dtr);
+                Dtr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            return Dt;
+
+        }
+
     }
 }
